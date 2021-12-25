@@ -1,0 +1,43 @@
+{
+    "numeroCorrelativo": "001",
+    "proveedor": "Martin S.A",
+    "contacto": "Pepe lucho",
+    "fechaRegistro": "22/03/2010",
+    "estado": "pendiente",
+    "montoTotal": "340.00",
+    "subTotal": "320.00",
+    "totalIgv": "34.00",
+    "codigoMoneda": "PEN",
+    "uid": "3489237489723894",
+    "cliente": {
+        "uid": "1342423424234",
+        "razonSocial": "Martin S.A",
+        "ruc": "100000232444",
+        "contacto": "Pepe lucho"
+    },
+    "items": [
+        {
+          "uid": "sdfsdf8422948908",
+          "reference": "CORR-195",
+          "name": "Corredores",
+          "description": "corredores",
+          "price": 1000,
+          "discount": "0.00",
+          "quantity": "1.00",
+          "productKey": "01010101",
+          "total": 1000
+        },
+        {
+            "uid": "dfdfsd344444444",
+            "reference": "BISA-192",
+            "name": "Bisagras",
+            "description": "bisagrasa",
+            "price": 30,
+            "discount": "0.00",
+            "quantity": "1.00",
+            "productKey": "01010101",
+            "total": 400
+          }
+      ]
+
+}

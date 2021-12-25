@@ -1,0 +1,35 @@
+{
+    "colores": [
+      {
+        "uid": "9bd92f20-34d7-11ec-8d3d-0242ac130003",
+        "name": "azul",
+        "description": "azul"
+      },
+      {
+        "uid": "9bd9315a-34d7-11ec-8d3d-0242ac130003",
+        "name": "verde",
+        "description": "verde"
+      },
+      {
+        "uid": "9bd9324a-34d7-11ec-8d3d-0242ac130003",
+        "name": "rojo",
+        "description": "ca"
+      },
+      {
+        "uid": "9bd93312-34d7-11ec-8d3d-0242ac130003",
+        "name": "blanco",
+        "description": "ca"
+      },
+      {
+        "uid": "9bd93312-34d7-11ec-8d3d-0242ac130003",
+        "name": "negro",
+        "description": "negro"
+      },
+      {
+        "uid": "9bd93312-34d7-11ec-8d3d-0242ac130003",
+        "name": "blanco hueso",
+        "description": "hueso"
+      }
+    ],
+    "total": 6
+  }

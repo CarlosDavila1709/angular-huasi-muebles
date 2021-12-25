@@ -1,0 +1,57 @@
+<div class="fondo-modal-imagen fadeIn fast"
+    [class.oculto]="modalTrasladoOrdenService.ocultarModal">
+
+    <div class="modal fade show" 
+    id="exampleModal" 
+    tabindex="-1" 
+    role="dialog" 
+    aria-labelledby="modalIngresoOrden"
+    style="display: block;">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalMarca">Traslado de compra</h4>
+                </div>
+                <div class="modal-body">
+                   
+                    <h3>Seleccione el destino</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Almacen</label>
+                                <select class="form-control custom-select">
+                                    <option value="AL001">Ate vitarte</option>
+                                    <option value="AL002">San juan lurigancho</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Obras</label>
+                                <select class="form-control custom-select">
+                                    <option value="POYECT001">Obra comas</option>
+                                    <option value="POYECT002">Obra san borja</option>
+                                    <option value="POYECT002">Obra santa anita</option>
+                                    <option value="POYECT002">Obra edificio la molina</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button 
+                        type="button" 
+                        class="btn btn-default" 
+                        data-dismiss="modal"
+                        (click)="cerrarModal()">Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

@@ -1,0 +1,119 @@
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-info">
+                <h4 class="m-b-0 text-white">Nueva orden Compra</h4>
+            </div>
+
+            <!-- 
+            <div class="card-body">
+                <h4 class="card-title">Nueva Orden</h4>
+                <form class="form-horizontal p-t-20"
+                    [formGroup]="newOrdenForm"
+                    (submit)="guardarNewOrden()">
+                </form>
+            </div>
+            -->
+            <div class="card-body">
+                <form 
+                    [formGroup]="newOrdenForm"
+                    (submit)="guardarNewOrden()">
+                    <div class="form-body">
+                        <div class="row p-t-20">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Cliente Ruc</label>
+                                    <input type="text" id="firstName" class="form-control" placeholder="Ruc">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Fecha Compra</label>
+                                    <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                </div>   
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group has-success">
+                                    <label class="control-label">Moneda</label>
+                                    <select class="form-control custom-select">
+                                        <option value="">USD-dolar americano</option>
+                                        <option value="">PEN-Sol peruano</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Monto total</label>
+                                    <input type="text" id="firstName" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+
+                        </div>
+                        <!--/row-->
+                        <h3 class="box-title m-t-40">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal" class="btn btn-info text-white" (click)="abrirModal()">+ Agregar material</a>
+                        </h3>
+                        <hr>
+                        
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0" style="cursor: pointer;">
+                                    <thead>
+                                        <tr>
+                                            <th>Referencia</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Descuento</th>
+                                            <th>Cantidad</th>
+                                            <th>total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor = "let material of materialesTmp">
+
+                                            <td>{{ material.reference }}</td>
+                                            <td>{{ material.name }}</td>
+                                            <td>{{ material.name }}</td>
+                                            <td>{{ material.name }}</td>
+                                            <td>{{ material.name }}</td>
+                                            <td class="text-nowrap text-center">
+                                                <!--
+                                                <a data-toggle="tooltip" 
+                                                    data-original-title="Editar"> 
+                                                    <i class="fa fa-pencil text-inverse m-r-10"></i> 
+                                                </a>
+                                                -->
+            
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            <input style="position: absolute; display: none;"></div>
+                        </div>
+
+
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
+                        <button type="button" class="btn btn-inverse">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>

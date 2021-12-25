@@ -1,0 +1,35 @@
+{
+    "modelos": [
+      {
+        "uid": "9bd92f20-34d7-11ec-8d3d-0242ac130003",
+        "name": "mode001",
+        "description": "modelo"
+      },
+      {
+        "uid": "9bd9315a-34d7-11ec-8d3d-0242ac130003",
+        "name": "mode002",
+        "description": "modelo"
+      },
+      {
+        "uid": "9bd9324a-34d7-11ec-8d3d-0242ac130003",
+        "name": "mode003",
+        "description": "modelo"
+      },
+      {
+        "uid": "9bd93312-34d7-11ec-8d3d-0242ac130003",
+        "name": "mode004",
+        "description": "modelo"
+      },
+      {
+        "uid": "9bd93312-34d7-11ec-8d3d-0242ac130003",
+        "name": "mode005",
+        "description": "modelo"
+      },
+      {
+        "uid": "9bd93312-34d7-11ec-8d3d-0242ac130003",
+        "name": "mode006",
+        "description": "modelo"
+      }
+    ],
+    "total": 6
+  }

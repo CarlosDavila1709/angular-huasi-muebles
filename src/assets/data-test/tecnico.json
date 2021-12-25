@@ -1,0 +1,63 @@
+{
+    "tecnicos": [
+      {
+        "nombre": "Carlos",
+        "apellidos": "Davila",
+        "fechaNacimiento": "22/03/2010",
+        "telefono": "7897987",
+        "documento": "DNI",
+        "numeroDocumento": "678678687",
+        "direccion": "los nogales",
+        "email": "test@gmail.com",
+        "password": "1324234234",
+        "img": "---",
+        "google": true,
+        "role": "Admin",
+        "uid": "3489237489723894"
+      },
+      {
+        "nombre": "Daniel",
+        "apellidos": "Chuquivilca",
+        "fechaNacimiento": "30/03/2000",
+        "documento": "PASSPORTE",
+        "numeroDocumento": "87897987",
+        "telefono": "7897897987",
+        "direccion": "San luis ",
+        "email": "test@gmail.com",
+        "password": "eertretrwe",
+        "img": "---",
+        "google": true,
+        "role": "Admin",
+        "uid": "uioeuroiweuroi88erewrw"
+      },
+      {
+        "nombre": "Juan Luis",
+        "apellidos": "Reynoso Orbegoso",
+        "fechaNacimiento": "13/09/2000",
+        "documento": "TARJETA EXTRANJERIA",
+        "numeroDocumento": "238273823",
+        "telefono": "789897987",
+        "direccion": "San Borja ",
+        "email": "juan@gmail.com",
+        "password": "eertretrwe",
+        "img": "---",
+        "google": true,
+        "role": "Admin",
+        "uid": "uioeuroiweuroi88erewrw"
+      },
+      {
+        "nombre": "Batman",
+        "apellidos": "Perez Duarte",
+        "fechaNacimiento": "10/05/2000",
+        "telefono": "7897897987",
+        "direccion": "San Marti - sauces av. san luis 888",
+        "email": "batman@gmail.com",
+        "password": "32312312",
+        "img": "---",
+        "google": true,
+        "role": "Admin",
+        "uid": "uioeuroiweuroi88erewrw"
+      }
+    ],
+    "total": 4
+  }

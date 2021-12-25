@@ -1,0 +1,120 @@
+
+<div class="row animated fadeIn fast"
+*ngIf="cargando">
+<div class="col-12">
+    
+    <div class="alert alert-info text-center">
+        <h4 class="alert-heading">Cargando...</h4>
+        <i class="fa fa-spin fa-refresh fa-2x"></i>    
+        <p class="mb-0">Por favor espere</p>
+    </div>
+
+</div>
+
+</div>
+
+<!-- 
+<div class="row animated fadeIn fast"
+*ngIf="!cargando">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="row animated fadeIn fast">
+                    <div class="col-6">
+                        <h4 class="card-title">Total de almacenes ({{ totalAlmacenes }}) - {{ desde }}</h4>
+                        <h6 class="card-subtitle">Almacenes registrados en mi aplicación</h6>
+                    </div>
+                    <div class="col-6">
+                        <div style="float:right"> 
+                            <button type="button"
+                                class="btn btn-success waves-effect waves-light"
+                                (click)="nuevoAlmacen()">
+                                Crear nuevo almacen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                                <th>Dirección</th>
+                                <th class="text-nowrap w100">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let almacen of almacenes">
+
+                                <td>{{ almacen.name }}</td>
+                                <td>{{ almacen.description }}</td>
+                                <td>{{ almacen.address }}</td>
+                                <td class="text-nowrap text-center">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+
+<div class="row animated fadeIn fast"
+*ngIf="!cargando">
+
+    <div class="col-12">
+        <div class="row animated fadeIn fast">
+            <div class="col-6">
+                <h4 class="card-title">Total de almacenes ({{ totalAlmacenes }}) - {{ desde }}</h4>
+                <p class="text-muted m-t-0">Almacenes registrados en huasi</p>
+            </div>
+            <div class="col-6">
+                <div style="float:right"> 
+                    <button type="button"
+                        class="btn btn-success waves-effect waves-light"
+                        (click)="nuevoAlmacen()">
+                        Crear nuevo almacen
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Row -->
+        <div class="row" *ngFor="let filaalmacen of almacenesTabla; let indice=index">
+
+            <div class="col-lg-3 col-md-6" *ngFor="let almacen of filaalmacen">
+                <div class="card">
+                    <img class="card-img-top img-responsive" src="../assets/images/almacen.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ almacen.name }}</h4>
+                        <p class="card-text">{{ almacen.address }}</p>
+                        <a href="#" class="btn btn-primary">Ver almacen</a>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="row" *ngIf="indice <= numeroColumnas">
+                
+                <div class="col-lg-3 col-md-6">
+                 
+                    <div class="card">
+                        <img class="card-img-top img-responsive" src="../assets/images/big/img1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">{{indice+1}}  {{ almacen.name }}</h4>
+                            <p class="card-text">{{ almacen.address }}</p>
+                            <a href="#" class="btn btn-primary">Ver almacen</a>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+
+
+</div>

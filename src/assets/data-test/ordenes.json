@@ -1,0 +1,53 @@
+{
+    "ordenes": [
+      {
+        "numeroCorrelativo": "001",
+        "proveedor": "Martin S.A",
+        "contacto": "Pepe lucho",
+        "fechaRegistro": "22/03/2010",
+        "estado": "pendiente",
+        "montoTotal": "340.00",
+        "subTotal": "320.00",
+        "totalIgv": "34.00",
+        "codigoMoneda": "PEN",
+        "uid": "3489237489723894"
+      },
+      {
+        "numeroCorrelativo": "002",
+        "proveedor": "Villa Industrial S.A",
+        "contacto": "Quispe",
+        "fechaRegistro": "12/03/2021",
+        "estado": "ingresado",
+        "montoTotal": "500.00",
+        "subTotal": "400.00",
+        "totalIgv": "84.00",
+        "codigoMoneda": "PEN",
+        "uid": "3489237489723894"
+      },
+      {
+        "numeroCorrelativo": "003",
+        "proveedor": "Martin S.A",
+        "contacto": "Pepe lucho",
+        "fechaRegistro": "22/03/2010",
+        "estado": "pendiente",
+        "montoTotal": "DNI",
+        "subTotal": "678678687",
+        "totalIgv": "los nogales",
+        "codigoMoneda": "PEN",
+        "uid": "3489237489723894"
+      },
+      {
+        "numeroCorrelativo": "004",
+        "proveedor": "Martin S.A",
+        "contacto": "Pepe lucho",
+        "fechaRegistro": "22/03/2010",
+        "estado": "pendiente",
+        "montoTotal": "DNI",
+        "subTotal": "678678687",
+        "totalIgv": "los nogales",
+        "codigoMoneda": "PEN",
+        "uid": "3489237489723894"
+      }
+    ],
+    "total": 4
+  }

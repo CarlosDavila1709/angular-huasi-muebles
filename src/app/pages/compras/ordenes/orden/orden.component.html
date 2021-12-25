@@ -1,0 +1,133 @@
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header bg-info">
+                <h4 class="m-b-0 text-white">Orden Compra</h4>
+            </div>
+            <div class="card-body">
+
+                <form class="form-horizontal" role="form">
+                    <div class="form-body">
+                        <h3 class="box-title">Cliente</h3>
+                        <hr class="m-t-0 m-b-40">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="control-label text-right col-md-3">Razon Social:</label>
+                                    <div class="col-md-9">
+                                        <p class="form-control-static"> {{ ordenTmp.cliente.razonSocial }}  </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="control-label text-right col-md-3">Ruc</label>
+                                    <div class="col-md-9">
+                                        <p class="form-control-static"> {{ ordenTmp.cliente.ruc }} </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="control-label text-right col-md-3">Contacto:</label>
+                                    <div class="col-md-9">
+                                        <p class="form-control-static"> {{ ordenTmp.cliente.contacto }} </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/span-->
+     
+                        </div>
+                        <!--/row-->
+                        <h3 class="box-title">Items</h3>
+
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="mainTable" class="table editable-table table-bordered table-striped m-b-0" style="cursor: pointer;">
+                                    <thead>
+                                        <tr>
+                                            <th>Referencia</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Descuento</th>
+                                            <th>Cantidad</th>
+                                            <th>total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor = "let item of ordenTmp.items">
+
+                                            <td>{{ item.reference }}</td>
+                                            <td>{{ item.name }}</td>
+                                            <td>{{ item.price }}</td>
+                                            <td>{{ item.discount }}</td>
+                                            <td>{{ item.quantity }}</td>
+                                            <td>{{ item.total }}</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th><strong>Sub. Total</strong></th>
+                                            <th><strong>S/. 44</strong></th>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th><strong>Descuento</strong></th>
+                                            <th><strong>S/. 20</strong></th>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th><strong>Total Igv</strong></th>
+                                            <th><strong>S/. 39</strong></th>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th><strong>Total</strong></th>
+                                            <th><strong>S/. 3999</strong></th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            <input style="position: absolute; display: none;"></div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button type="submit" class="btn btn-danger"> <i class="fa fa-pencil"></i> Edit</button>
+                                        <button type="button" class="btn btn-inverse">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6"> </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

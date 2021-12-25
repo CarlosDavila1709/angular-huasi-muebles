@@ -1,0 +1,29 @@
+{
+    "almacenes": [
+      {
+        "uid": "9bd92f20-34d7-11ec-8d3d-0242ac130003",
+        "name": "Principal",
+        "description": "Draibol dfjk",
+        "address": "Santa Anita"
+      },
+      {
+        "uid": "9bd9315a-34d7-11ec-8d3d-0242ac130003",
+        "name": "Secundario",
+        "description": "pernos",
+        "address": "Huaycan"
+      },
+      {
+        "uid": "9bd9324a-34d7-11ec-8d3d-0242ac130003",
+        "name": "San Juan",
+        "description": "ca",
+        "address": "San Juan Luringancho"
+      },
+      {
+        "uid": "9bd93312-34d7-11ec-8d3d-0242ac130003",
+        "name": "Ate",
+        "description": "ca",
+        "address": "Ate vitarte"
+      }
+    ],
+    "total": 4
+  }

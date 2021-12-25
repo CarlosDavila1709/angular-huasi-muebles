@@ -1,0 +1,66 @@
+<div class="fondo-modal-imagen fadeIn fast"
+    [class.oculto]="modalBuscadorMaterialService.ocultarModal">
+
+    <div class="modal fade show" 
+    id="exampleModal" 
+    tabindex="-1" 
+    role="dialog" 
+    aria-labelledby="exampleModalLabel1"
+    style="display: block;">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel1">Buscar Material</h4>
+
+                </div>
+                <div class="modal-body">
+                   
+                    <div class="card-body">
+                        <input type="text" 
+                                class="form-control" 
+                                placeholder="Buscar materiales..."
+                                (keyup)="buscar( txtTermino.value )"
+                                #txtTermino/>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let material of materiales">
+                                <td>{{ material.name }}</td>
+                                <td>{{ material.description }}</td>
+                                <td>
+                                    <a data-toggle="tooltip" 
+                                        data-original-title="Borrar"
+                                        class="cursor"
+                                        (click)="agregarMaterial(material)"> 
+                                        <i class="fa fa-check text-danger"></i> Agregar
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button 
+                        type="button" 
+                        class="btn btn-default" 
+                        data-dismiss="modal"
+                        (click)="cerrarModal()">Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

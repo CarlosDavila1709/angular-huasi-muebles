@@ -1,0 +1,29 @@
+{
+    "proveedores": [
+      {
+        "razonSocial": "Martin S.A",
+        "contacto": "Pepe lucho",
+        "direccion": "Villa maria del triunfo",
+        "telefono": "4553434"
+      },
+      {
+        "razonSocial": "Villa Industrial S.A",
+        "contacto": "Pepe lucho",
+        "direccion": "Los nogales San juan Lurigancho",
+        "telefono": "4355566"
+      },
+      {
+        "razonSocial": "Villa Industrial S.A",
+        "contacto": "Pepe lucho",
+        "direccion": "La molina separadora",
+        "telefono": "4355566"
+      },
+      {
+        "razonSocial": "Villa Industrial S.A",
+        "contacto": "Pepe lucho",
+        "direccion": "Victoria",
+        "telefono": "4355566"
+      }
+    ],
+    "total": 4
+  }
