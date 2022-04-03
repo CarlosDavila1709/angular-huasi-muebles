@@ -1,0 +1,33 @@
+<div class="card-body">
+  <input type="text"
+          class="form-control"
+          placeholder="Buscar compras..."
+          (keyup)="buscar( txtTermino.value )"
+          #txtTermino/>
+</div>
+<table class="table table-bordered">
+  <thead>
+      <tr>
+          <th>Seleccionar</th>
+          <th>Numero Compra</th>
+          <th>Proveedor</th>
+          <th>Fecha Compra</th>
+          <th>Monto</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let inventario of inventarioList">
+          <td>
+            <div class="checkbox">
+              <input type="checkbox"  id="checkbox{{inventario.uid}}" value="check">
+              <label for="checkbox{{inventario.uid}}"></label>
+            </div>
+          </td>
+          <td>{{ inventario.name }}</td>
+          <td>{{ inventario.categoria.name }}</td>
+          <td>{{ inventario.medida }}</td>
+          <td>{{ inventario.stock }}</td>
+      </tr>
+  </tbody>
+</table>
+

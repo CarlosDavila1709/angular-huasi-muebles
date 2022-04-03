@@ -22,7 +22,7 @@ export class MarcaService {
         private router: Router,
         private ngZone: NgZone ) {
 
-    }  
+    }
     get headers(){
         return {
           headers: {
@@ -30,6 +30,17 @@ export class MarcaService {
           }
         }
       }
+
+
+    cargarMarcas(){
+
+      //const url = `${ base_url }/categorias`;
+      const url = "../../assets/data-test/marca.json";
+      return this.http.get( url, this.headers )
+        .pipe(
+          map( (resp: {ok: boolean, marcas: Marca[]} ) => resp.marcas)
+        );
+    }
     cargarMarca( desde: number = 0 ){
         //const url = `${ base_url }/usuarios?desde=${ desde }`;
         const url = "../../assets/data-test/marca.json";
@@ -38,16 +49,16 @@ export class MarcaService {
                     .pipe(
                       map( resp => {
                         console.log(resp);
-                        const marcas = resp.marcas.map( 
+                        const marcas = resp.marcas.map(
                           marca => new Marca(marca.uid, marca.name, marca.description)
                         );
                         return {
                           total: resp.total,
                           marcas
                         };
-                        
+
                       })
                     );
-                    
+
     }
 }

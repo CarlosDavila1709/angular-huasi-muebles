@@ -2,10 +2,10 @@
 <div class="row animated fadeIn fast"
 *ngIf="cargando">
 <div class="col-12">
-    
+
     <div class="alert alert-info text-center">
         <h4 class="alert-heading">Cargando...</h4>
-        <i class="fa fa-spin fa-refresh fa-2x"></i>    
+        <i class="fa fa-spin fa-refresh fa-2x"></i>
         <p class="mb-0">Por favor espere</p>
     </div>
 
@@ -13,7 +13,7 @@
 
 </div>
 
-<!-- 
+<!--
 <div class="row animated fadeIn fast"
 *ngIf="!cargando">
     <div class="col-12">
@@ -26,7 +26,7 @@
                         <h6 class="card-subtitle">Almacenes registrados en mi aplicación</h6>
                     </div>
                     <div class="col-6">
-                        <div style="float:right"> 
+                        <div style="float:right">
                             <button type="button"
                                 class="btn btn-success waves-effect waves-light"
                                 (click)="nuevoAlmacen()">
@@ -74,7 +74,7 @@
                 <p class="text-muted m-t-0">Almacenes registrados en huasi</p>
             </div>
             <div class="col-6">
-                <div style="float:right"> 
+                <div style="float:right">
                     <button type="button"
                         class="btn btn-success waves-effect waves-light"
                         (click)="nuevoAlmacen()">
@@ -92,15 +92,15 @@
                     <div class="card-body">
                         <h4 class="card-title">{{ almacen.name }}</h4>
                         <p class="card-text">{{ almacen.address }}</p>
-                        <a href="#" class="btn btn-primary">Ver almacen</a>
+                        <a routerLink='/dashboard/almacen-detalle/78798' onclick="verDetalleAlmacen('213213')" class="btn btn-primary">Ver almacen</a>
                     </div>
                 </div>
             </div>
             <!--
             <div class="row" *ngIf="indice <= numeroColumnas">
-                
+
                 <div class="col-lg-3 col-md-6">
-                 
+
                     <div class="card">
                         <img class="card-img-top img-responsive" src="../assets/images/big/img1.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -109,7 +109,7 @@
                             <a href="#" class="btn btn-primary">Ver almacen</a>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
             -->

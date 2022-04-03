@@ -17,11 +17,13 @@ import { ModeloComponent } from './inventario/modelo/modelo.component';
 import { MaterialesComponent } from './inventario/materiales/materiales.component';
 import { AlmacenesComponent } from './inventario/almacenes/almacenes.component';
 import { TrasladoCentralComponent } from './compras/ordenes/traslado/trasladocentral.component';
+import { AlmacendetalleComponent } from './inventario/almacen-detalle/almacen-detalle.component';
+import { TrasladosComponent } from './inventario/traslados/traslados.component';
 
 
 const routes: Routes = [
     {
-        path: 'dashboard', 
+        path: 'dashboard',
         component: PagesComponent,
         children: [
             { path: '', component: DashboardComponent, data:{ titulo:"Dashboard" } },
@@ -37,8 +39,10 @@ const routes: Routes = [
             { path: 'modelo', component: ModeloComponent, data:{ titulo:"" } },
             { path: 'material', component: MaterialesComponent, data:{ titulo:"" } },
             { path: 'almacen', component: AlmacenesComponent, data:{ titulo:"" } },
+            { path: 'traslados', component: TrasladosComponent, data:{ titulo:"" } },
             { path: 'traslado-central/:uidOrden', component: TrasladoCentralComponent, data:{ titulo:"" } },
-        ] 
+            { path: 'almacen-detalle/:uidAlmacen', component: AlmacendetalleComponent, data:{ titulo:"" } },
+        ]
     },
 
 ]

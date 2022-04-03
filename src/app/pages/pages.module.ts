@@ -22,13 +22,15 @@ import { ModeloComponent } from './inventario/modelo/modelo.component';
 import { MaterialesComponent } from './inventario/materiales/materiales.component';
 import { AlmacenesComponent } from './inventario/almacenes/almacenes.component';
 import { TrasladoCentralComponent } from './compras/ordenes/traslado/trasladocentral.component';
+import { AlmacendetalleComponent } from './inventario/almacen-detalle/almacen-detalle.component';
+import { TrasladosComponent } from './inventario/traslados/traslados.component';
 
 
 @NgModule({
   declarations: [
-    PagesComponent, 
-    ProgressComponent, 
-    DashboardComponent, 
+    PagesComponent,
+    ProgressComponent,
+    DashboardComponent,
     TecnicosComponent,
     ProveedoresComponent,
     OrdencompraComponent,
@@ -41,6 +43,8 @@ import { TrasladoCentralComponent } from './compras/ordenes/traslado/trasladocen
     MaterialesComponent,
     AlmacenesComponent,
     TrasladoCentralComponent,
+    AlmacendetalleComponent,
+    TrasladosComponent
   ],
   exports: [
     DashboardComponent,

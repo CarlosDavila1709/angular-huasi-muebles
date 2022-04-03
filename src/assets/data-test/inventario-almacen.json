@@ -1,0 +1,53 @@
+{
+  "inventario": [
+    {
+      "uid": "9bd92f20-34d7-11ec-8d3d-0242ac130003",
+      "name": "xxxxxx",
+      "almacen":{
+          "uid":"9bd92f20-34d7-11ec-8d3d-0242ac136667",
+          "name":"ate",
+          "dirección":"los angeles #4546"
+      }  ,
+      "material": {
+          "uid":"9bd92f20-34d7-11ec-8d3d-0242ac135553",
+          "name":"pisos laminados"
+      },
+      "categoria":{
+          "uid":"9bd92f20-34d7-11ec-8d3d-0242ac134443",
+          "name":"pisos"
+      },
+      "modelo":{
+          "uid":"9bd92f20-34d7-11ec-8d3d-0242ac139873",
+          "name":"xxxx"
+      },
+      "fechaIngreso":"2020.02.14",
+      "stock": 150021,
+      "medida": "plza"
+    },
+    {
+      "uid": "9bd92f20-34d7-11ec-8d3d-0242ac131003",
+      "name": "bbbbb",
+      "almacen":{
+          "uid":"9bd92f20-34d7-11ec-8d3d-0242ac136667",
+          "name":"ate",
+          "dirección":"los angeles #4546"
+      }  ,
+      "material": {
+          "uid":"9bd92f20-34d7-11ec-8d3d-0242ac131553",
+          "name":"clavos"
+      },
+      "categoria":{
+          "uid":"9bd92f20-34d7-11ec-8d3d-0242ac131443",
+          "name":"clavos"
+      },
+      "modelo":{
+          "uid":"9bd92f20-34d7-11ec-8d3d-0242ac131873",
+          "name":"droper"
+      },
+      "fechaIngreso":"2020.02.14",
+      "stock": 150021,
+      "medida": "plza"
+    }
+  ],
+  "total": 4
+}

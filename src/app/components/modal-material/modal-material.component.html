@@ -1,10 +1,10 @@
 <div class="fondo-modal-imagen fadeIn fast"
     [class.oculto]="modalMaterialService.ocultarModal">
 
-    <div class="modal fade show" 
-    id="exampleModal" 
-    tabindex="-1" 
-    role="dialog" 
+    <div class="modal fade show"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
     aria-labelledby="modalMaterial"
     style="display: block;">
 
@@ -17,29 +17,29 @@
                         <h4 class="modal-title" id="modalMaterial">Nuevo material</h4>
                     </div>
                     <div class="modal-body">
-                    
+
                         <div class="form-group">
                             <label for="recipient-name" class="control-label">Nombre:</label>
-                            <input type="text" 
+                            <input type="text"
                                 formControlName="nombre"
-                                class="form-control" 
+                                class="form-control"
                                 id="nombre">
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="control-label">Descripción:</label>
                             <textarea type="text"
                                 formControlName="descripcion"
-                                class="form-control" 
+                                class="form-control"
                                 id="descripcion"></textarea>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">Categoria</label>
                                     <select class="form-control"
                                         formControlName="categoria">
-                                        <option value="">Seleccione Categoria</option>
+                                        <option value="">Seleccione una categoria</option>
                                         <option *ngFor="let categoria of categorias"
                                             [value]="categoria.uid">
                                             {{ categoria.name }}
@@ -50,9 +50,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">Marca</label>
-                                    <select class="form-control custom-select">
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select class="form-control"
+                                        formControlName="marca">
+                                        <option value="">Seleccione una marca</option>
+                                        <option *ngFor="let marca of marcas"
+                                            [value]="marca.uid">
+                                            {{ marca.name }}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -61,18 +65,26 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">Modelo</label>
-                                    <select class="form-control custom-select">
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select class="form-control"
+                                        formControlName="modelo">
+                                        <option value="">Seleccione un modelo</option>
+                                        <option *ngFor="let modelo of modelos"
+                                            [value]="modelo.uid">
+                                            {{ modelo.name }}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">Color</label>
-                                    <select class="form-control custom-select">
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select class="form-control"
+                                        formControlName="modelo">
+                                        <option value="">Seleccione un color</option>
+                                        <option *ngFor="let color of colores"
+                                            [value]="color.uid">
+                                            {{ color.name }}
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -87,9 +99,15 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button 
-                            type="button" 
-                            class="btn btn-default" 
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          data-dismiss="modal"
+                          (click)="guardarMaterial()">Grabar
+                        </button>
+                        <button
+                            type="button"
+                            class="btn btn-default"
                             data-dismiss="modal"
                             (click)="cerrarModal()">Cancelar
                         </button>

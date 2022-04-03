@@ -22,7 +22,7 @@ export class ModeloService {
         private router: Router,
         private ngZone: NgZone ) {
 
-    }  
+    }
     get headers(){
         return {
           headers: {
@@ -30,6 +30,18 @@ export class ModeloService {
           }
         }
       }
+
+
+
+    cargarModelos(){
+
+      //const url = `${ base_url }/categorias`;
+      const url = "../../assets/data-test/modelo.json";
+      return this.http.get( url, this.headers )
+        .pipe(
+          map( (resp: {ok: boolean, modelos: Modelo[]} ) => resp.modelos)
+        );
+    }
     cargarModelo( desde: number = 0 ){
         //const url = `${ base_url }/usuarios?desde=${ desde }`;
         const url = "../../assets/data-test/modelo.json";
@@ -38,16 +50,16 @@ export class ModeloService {
                     .pipe(
                       map( resp => {
                         console.log(resp);
-                        const modelos = resp.modelos.map( 
+                        const modelos = resp.modelos.map(
                           modelo => new Modelo(modelo.uid, modelo.name, modelo.description)
                         );
                         return {
                           total: resp.total,
                           modelos
                         };
-                        
+
                       })
                     );
-                    
+
     }
 }

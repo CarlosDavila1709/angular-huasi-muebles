@@ -35,7 +35,7 @@ export class SidebarService {
           titulo: 'Inventario',
           icono:  'mdi mdi-folder-lock-open',
           submenu: [
-            { titulo: 'traslados', url: 'almacen'},
+            { titulo: 'traslados', url: 'traslados'},
           ]
         },
         {

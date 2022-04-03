@@ -23,7 +23,7 @@ export class ColorService {
         private router: Router,
         private ngZone: NgZone ) {
 
-    }  
+    }
     get headers(){
         return {
           headers: {
@@ -31,6 +31,17 @@ export class ColorService {
           }
         }
       }
+
+
+    cargarColores(){
+
+      //const url = `${ base_url }/categorias`;
+      const url = "../../assets/data-test/color.json";
+      return this.http.get( url, this.headers )
+        .pipe(
+          map( (resp: {ok: boolean, colores: Color[]} ) => resp.colores)
+        );
+    }
     cargarColor( desde: number = 0 ){
         //const url = `${ base_url }/usuarios?desde=${ desde }`;
         const url = "../../assets/data-test/color.json";
@@ -39,16 +50,16 @@ export class ColorService {
                     .pipe(
                       map( resp => {
                         console.log(resp);
-                        const colores = resp.colores.map( 
+                        const colores = resp.colores.map(
                           color => new Color(color.uid, color.name, color.description)
                         );
                         return {
                           total: resp.total,
                           colores
                         };
-                        
+
                       })
                     );
-                    
+
     }
 }

@@ -1,8 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Almacen } from 'src/app/models/almacen.model';
-
 import { ModalAlmacenService } from 'src/app/services/modal-almacen.service';
-
 import { AlmacenesService } from '../../../services/almacenes.service';
 
 @Component({
@@ -12,21 +11,22 @@ import { AlmacenesService } from '../../../services/almacenes.service';
   ]
 })
 export class AlmacenesComponent implements OnInit, OnDestroy {
-  
+
   public totalAlmacenes: number = 0;
   public almacenes: Almacen[] = [];
-  public almacenesTemp: Almacen[] = []; 
+  public almacenesTemp: Almacen[] = [];
 
   public desde: number = 0;
   public cargando: boolean = true;
 
   public numeroFilas: number = 1;
   public numeroColumnas: number = 5;
-  public almacenesTabla: Almacen[][] = []; 
+  public almacenesTabla: Almacen[][] = [];
 
-  constructor(private almacenesService: AlmacenesService,
+  constructor(private router: Router,
+              private almacenesService: AlmacenesService,
               private modalAlmacenService: ModalAlmacenService) {}
-  
+
   ngOnInit(): void {
     this.cargarAlmacenes();
   }
@@ -78,4 +78,5 @@ export class AlmacenesComponent implements OnInit, OnDestroy {
     this.almacenesTabla = arregloDeArreglos;
     console.log("Arreglo de arreglos: ", arregloDeArreglos);
   }
+
 }

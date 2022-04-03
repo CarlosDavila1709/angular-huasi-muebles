@@ -1,0 +1,56 @@
+<div class="fondo-modal-imagen fadeIn fast"
+    [class.oculto]="modalBuscadorMaterialAlmacenService.ocultarModal">
+
+    <div class="modal fade show"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel1"
+      style="display: block;">
+
+
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title" id="exampleModalLabel1">Buscar materiales en el almacen </h4>
+              </div>
+              <div class="modal-body">
+
+                  <div class="row">
+                    <div class="col-md-6">
+
+                      <div class="form-group">
+                        <h5>Buscar por: </h5>
+                        <fieldset class="controls">
+                            <label class="custom-control custom-radio">
+                                <input type="radio" value="1" name="styled_radio" id="styled_radio1" class="custom-control-input" (change)="seleccionTipoBuscado($event)">
+                                <span class="custom-control-indicator"></span> <span class="custom-control-description">Nombre Material</span> </label>
+                        </fieldset>
+                        <fieldset>
+                            <label class="custom-control custom-radio">
+                                <input type="radio" value="2" name="styled_radio" id="styled_radio2" class="custom-control-input" (change)="seleccionTipoBuscado($event)">
+                                <span class="custom-control-indicator"></span> <span class="custom-control-description">Numero de compra</span> </label>
+                        </fieldset>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <app-tabla-materiales-por-nombre *ngIf="tipoBuscador == 'BUSC_NOMBRE'"
+                  ></app-tabla-materiales-por-nombre>
+                  <app-tabla-materiales-por-compra *ngIf="tipoBuscador == 'BUSC_COMPRA'"
+                  ></app-tabla-materiales-por-compra>
+
+              <div class="modal-footer">
+                  <button
+                      type="button"
+                      class="btn btn-default"
+                      data-dismiss="modal"
+                      (click)="cerrarModal()">Cancelar
+                  </button>
+              </div>
+          </div>
+        </div>
+
+      </div>
+ </div>
