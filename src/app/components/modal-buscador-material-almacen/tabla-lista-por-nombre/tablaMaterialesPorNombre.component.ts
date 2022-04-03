@@ -6,7 +6,7 @@ import { InventarioService } from 'src/app/services/inventario.service';
 
 @Component({
   selector: 'app-tabla-materiales-por-nombre',
-  templateUrl: './tablaMaterialesPorNombre.Component.html',
+  templateUrl: './tablaMaterialesPorNombre.component.html',
   styles: [
   ]
 })
