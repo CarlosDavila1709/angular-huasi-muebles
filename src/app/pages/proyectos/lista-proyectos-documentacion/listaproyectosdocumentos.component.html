@@ -1,0 +1,145 @@
+
+<div class="row animated fadeIn fast"
+*ngIf="cargando">
+<div class="col-12">
+
+    <div class="alert alert-info text-center">
+        <h4 class="alert-heading">Cargando...</h4>
+        <i class="fa fa-spin fa-refresh fa-2x"></i>
+        <p class="mb-0">Por favor espere</p>
+    </div>
+
+</div>
+
+</div>
+
+<div class="row animated fadeIn fast"
+*ngIf="!cargando">
+<div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="row animated fadeIn fast">
+                <div class="col-6">
+                    <h4 class="card-title">Total de proyectos ({{ totalProyectos }}) - {{ desde }}</h4>
+                    <h6 class="card-subtitle">Ordenes registrados en mi aplicación</h6>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nº Proyecto</th>
+                            <th>Nombre Proyecto</th>
+                            <th>Cliente</th>
+                            <th>Sede</th>
+                            <th>DOC</th>
+                            <th>E/O</th>
+                            <th>O/S</th>
+                            <th>INFORME</th>
+                            <th>CONF</th>
+                            <th>FACT</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let proyecto of proyectos">
+                            <td>{{ proyecto.numeroProyecto }}</td>
+                            <td>{{ proyecto.nombre }}</td>
+                            <td>{{ proyecto.cliente }}</td>
+                            <td>{{ proyecto.sede }}</td>
+                            <td *ngIf="proyecto.estadoDoc == 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" checked disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoDoc != 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoEO == 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" checked disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoEO != 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoOS == 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" checked disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoOS != 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoInforme == 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" checked disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoInforme != 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoConf == 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" checked disabled  >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoConf != 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoFact == 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" checked disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td *ngIf="proyecto.estadoFact != 'pendiente'">
+                              <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" disabled >
+                                <span class="custom-control-indicator"></span>
+                              </label>
+                            </td>
+                            <td>
+                              <a (click)="actualizar(proyecto)"
+                                data-toggle="tooltip"
+                                class="cursor"
+                                data-original-title="Actualizar Proyecto">
+                                <i class="fa fa-pencil text-inverse m-r-10"></i>
+                              </a>
+                              <a (click)="eliminar(proyecto)"
+                                data-toggle="tooltip"
+                                class="cursor"
+                                data-original-title="Eliminar Proyecto">
+                                <i class="fa fa-close text-danger"></i>
+                              </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>

@@ -1,0 +1,116 @@
+<div class="fondo-modal-imagen fadeIn fast"
+    [class.oculto]="modalSemanaPersonalService.ocultarModal">
+
+    <div class="modal fade show"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modalSemanaPersonal"
+    style="display: block;">
+
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalMarca">Semana Personal</h4>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="d-flex">
+                      <div class="mr-auto">
+                          <div class="form-group">
+                              <button id="demo-btn-addrow" (click)="agregarPersonal()" class="btn btn-warning btn-sm"><i class="icon wb-plus" aria-hidden="true"></i>Nuevo Personal
+                              </button>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table id="mainTable" class="table color-table warning-table" style="cursor: pointer;">
+                        <thead>
+                          <tr>
+                              <th>#</th>
+                              <th>Personal</th>
+                              <th>Lunes</th>
+                              <th>Martes</th>
+                              <th>Miercoles</th>
+                              <th>Jueves</th>
+                              <th>Viernes</th>
+                              <th>Sabado</th>
+                              <th>Domingo</th>
+                              <th>total turnos</th>
+                              <th>Sueldo/turno</th>
+                              <th>Adelanto</th>
+                              <th>Total sueldo</th>
+                              <th>Total a Pagar</th>
+                              <th>Acciones</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor = "let planilla of planillas">
+                              <td></td>
+                              <td>{{ planilla.personal.nombres }}</td>
+                              <td *ngIf="!planilla.isActualizar">{{ planilla.lunes }}</td>
+                              <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.lunes"></td>
+                              <td *ngIf="!planilla.isActualizar">{{ planilla.martes }}</td>
+                              <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.martes"></td>
+                              <td *ngIf="!planilla.isActualizar">{{ planilla.miercoles }}</td>
+                              <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.miercoles"></td>
+                              <td *ngIf="!planilla.isActualizar">{{ planilla.jueves }}</td>
+                              <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.jueves"></td>
+                              <td *ngIf="!planilla.isActualizar">{{ planilla.viernes }}</td>
+                              <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.viernes"></td>
+                              <td *ngIf="!planilla.isActualizar">{{ planilla.sabado }}</td>
+                              <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.sabado"></td>
+                              <td *ngIf="!planilla.isActualizar">{{ planilla.domingo }}</td>
+                              <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.domingo"></td>
+                              <td>{{ planilla.totalTurnos }}</td>
+                              <td *ngIf="!planilla.isActualizar">{{ planilla.sueldo }}</td>
+                              <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.sueldo"></td>
+                              <td *ngIf="!planilla.isActualizar">{{ planilla.adelanto }}</td>
+                              <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.adelanto"></td>
+                              <td>{{ planilla.totalSueldo }}</td>
+                              <td>{{ planilla.totalApagar }}</td>
+                              <td>
+                                <a *ngIf="!planilla.isActualizar" (click)="mostrarPlanilla(planilla)"
+                                  data-toggle="tooltip"
+                                  class="cursor"
+                                  data-original-title="Actualizar Planilla">
+                                  <i class="fa fa-pencil text-inverse m-r-10"></i>
+                                </a>
+                                <a *ngIf="planilla.isActualizar" (click)="actualizarPlanilla(planilla)"
+                                  data-toggle="tooltip"
+                                  class="cursor"
+                                  data-original-title="Actualizar Planilla">
+                                  <i class="fa fa-check text-inverse m-r-10"></i>
+                                </a>
+                                <a *ngIf="planilla.isActualizar" (click)="CancelarEliminacion(proyecto)"
+                                  data-toggle="tooltip"
+                                  class="cursor"
+                                  data-original-title="Cancelar Planilla">
+                                  <i class="fa fa-close text-inverse m-r-10"></i>
+                                </a>
+                                <a *ngIf="!planilla.isActualizar" (click)="eliminarPlanilla(proyecto)"
+                                  data-toggle="tooltip"
+                                  class="cursor"
+                                  data-original-title="Eliminar Planilla">
+                                  <i class="fa fa-trash text-danger"></i>
+                                </a>
+                              </td>
+                          </tr>
+                      </tbody>
+                      </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                      type="button"
+                      class="btn btn-default"
+                      data-dismiss="modal"
+                      (click)="cerrarModal()">Cancelar
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

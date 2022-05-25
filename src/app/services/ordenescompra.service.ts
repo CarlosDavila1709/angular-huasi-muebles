@@ -22,7 +22,7 @@ export class OrdenesCompraService {
         private router: Router,
         private ngZone: NgZone ) {
 
-    }  
+    }
     get headers(){
         return {
           headers: {
@@ -38,27 +38,27 @@ export class OrdenesCompraService {
         return this.http.get<CargarOrdenes>( url, this.headers )
                     .pipe(
                       map( resp => {
-                        console.log(resp);
-                        const ordenes = resp.ordenes.map( 
+                        console.log("map: "+resp);
+                        const ordenes = resp.ordenes.map(
                           orden => new Ordenescompra(orden.numeroCorrelativo,
-                                                    orden.proveedor, 
-                                                    orden.contacto, 
-                                                    orden.fechaRegistro, 
-                                                    orden.estado, 
+                                                    orden.proveedor,
+                                                    orden.contacto,
+                                                    orden.fechaRegistro,
+                                                    orden.estado,
                                                     orden.montoTotal,
-                                                    orden.subTotal, 
-                                                    orden.totalIgv, 
-                                                    orden.codigoMoneda, 
+                                                    orden.subTotal,
+                                                    orden.totalIgv,
+                                                    orden.codigoMoneda,
                                                     orden.uid)
                         );
                         return {
                           total: resp.total,
                           ordenes
                         };
-                        
+
                       })
                     );
-                    
+
     }
 
     obtenerOrdenCompraPorUid( uid: string){
@@ -67,7 +67,7 @@ export class OrdenesCompraService {
       console.log("ingresa... compra")
       return this.http.get( url)
         .pipe(
-          map( (res : Orden ) => res ) 
+          map( (res : Orden ) => res )
         );
     }
 }

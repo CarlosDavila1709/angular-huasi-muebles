@@ -19,6 +19,10 @@ import { AlmacenesComponent } from './inventario/almacenes/almacenes.component';
 import { TrasladoCentralComponent } from './compras/ordenes/traslado/trasladocentral.component';
 import { AlmacendetalleComponent } from './inventario/almacen-detalle/almacen-detalle.component';
 import { TrasladosComponent } from './inventario/traslados/traslados.component';
+import { ListaproyectosComponent } from './proyectos/lista-proyectos/listaproyectos.component';
+import { CrearproyectoComponent } from './proyectos/crear-proyectos/crearproyecto.component';
+import { ActualizarproyectoComponent } from './proyectos/actualizar-proyecto/actualizarproyecto.component';
+import { ListaproyectosdocumentosComponent } from './proyectos/lista-proyectos-documentacion/listaproyectosdocumentos.component';
 
 
 const routes: Routes = [
@@ -42,6 +46,10 @@ const routes: Routes = [
             { path: 'traslados', component: TrasladosComponent, data:{ titulo:"" } },
             { path: 'traslado-central/:uidOrden', component: TrasladoCentralComponent, data:{ titulo:"" } },
             { path: 'almacen-detalle/:uidAlmacen', component: AlmacendetalleComponent, data:{ titulo:"" } },
+            { path: 'proyectos', component: ListaproyectosComponent, data:{ titulo:"" } },
+            { path: 'proyectos/documentos', component: ListaproyectosdocumentosComponent, data:{ titulo:"" } },
+            { path: 'newproyecto', component: CrearproyectoComponent, data:{ titulo:"" } },
+            { path: 'actualizarproyecto', component: ActualizarproyectoComponent, data:{ titulo:"" } },
         ]
     },
 

@@ -1,0 +1,47 @@
+{
+  "proyectosdocumentos": [
+    {
+      "numeroProyecto": "0001",
+      "nombre": "SS.EE fuga de agua - panaderia",
+      "cliente": "SENATI",
+      "sede": "INDEP",
+      "fechaRegistro": "01/02/2022",
+      "estado": "pediente",
+      "estadoDoc": "pendiente",
+      "estadoEO": "pendiente",
+      "estadoOS": "pendiente",
+      "estadoInforme": "pendiente",
+      "estadoConf": "pendiente",
+      "estadoFact": "pendiente"
+    },
+    {
+      "numeroProyecto": "0002",
+      "nombre": "MTTO BAÑOS",
+      "cliente": "SENATI",
+      "sede": "San Martin",
+      "fechaRegistro": "01/02/2022",
+      "estado": "pediente",
+      "estadoDoc": "presentado",
+      "estadoEO": "pendiente",
+      "estadoOS": "pendiente",
+      "estadoInforme": "pendiente",
+      "estadoConf": "pendiente",
+      "estadoFact": "pendiente"
+    },
+    {
+      "numeroProyecto": "0003",
+      "nombre": "GAS TRUJILLO-B",
+      "cliente": "SENATI",
+      "sede": "TRUJILLO",
+      "fechaRegistro": "01/02/2022",
+      "estado": "pediente",
+      "estadoDoc": "presentado",
+      "estadoEO": "presentado",
+      "estadoOS": "pendiente",
+      "estadoInforme": "pendiente",
+      "estadoConf": "pendiente",
+      "estadoFact": "pendiente"
+    }
+  ],
+  "total": 4
+}

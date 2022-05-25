@@ -1,0 +1,429 @@
+<div class="row">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header bg-info">
+              <h4 class="m-b-0 text-white">Actualizar Proyecto</h4>
+          </div>
+          <div class="card-body">
+
+            <div class="form-body">
+              <h3 class="card-title">Cliente</h3>
+              <hr>
+              <div class="row p-t-20">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label class="control-label">Razon social</label>
+                          <input type="text" id="firstName" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <!--/span-->
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label class="control-label">Ruc</label>
+                          <input type="text" id="lastName" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <!--/span-->
+              </div>
+              <!--/row-->
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label class="control-label">Dirección</label>
+                          <input type="text" id="firstName" class="form-control" placeholder="">
+                      </div>
+                  </div>
+                  <!--/span-->
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label class="control-label">Sector</label>
+                          <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                            <option value="Category 1">Industria</option>
+                            <option value="Category 2">Educación</option>
+                            <option value="Category 3">Salud</option>
+                            <option value="Category 4">Financiera</option>
+                          </select>
+                      </div>
+                  </div>
+                  <!--/span-->
+              </div>
+              <!--/row-->
+              <h3 class="box-title m-t-40">Proyecto</h3>
+              <hr>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Nombre del proyecto</label>
+                          <input type="text" class="form-control">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 ">
+                    <div class="form-group">
+                        <label>Descripción del proyecto</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 ">
+                  <div class="form-group">
+                    <label>Dirección del proyecto</label>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <!--/row-->
+              <div class="row">
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <label>Monto total del proyecto</label>
+                      <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-addon">.00</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!--/span-->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Monto total del proyecto</label>
+                      <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-addon">.00</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/span-->
+              </div>
+
+              <h3 class="box-title m-t-40">Gastos de Proyecto</h3>
+              <hr>
+              <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Costo de Materiales</h4>
+                            <div class="d-flex">
+                              <div class="mr-auto">
+                                  <div class="form-group">
+                                      <button id="demo-btn-addrow" (click)="mostrarAgregarGastoMaterial()" class="btn btn-primary btn-sm"><i class="icon wb-plus" aria-hidden="true"></i>Agregar Gasto
+                                      </button>
+                                   </div>
+                              </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table color-table primary-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Descripción</th>
+                                            <th>Marca</th>
+                                            <th>Cantidad</th>
+                                            <th>Und. Medida</th>
+                                            <th>Costo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>pinturas</td>
+                                            <td>Tekno</td>
+                                            <td>50 galones</td>
+                                            <td>Und.</td>
+                                            <td>S/ 500.21</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>brochas</td>
+                                            <td>Tekno</td>
+                                            <td>20</td>
+                                            <td>Und.</td>
+                                            <td>S/ 10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>lijas</td>
+                                            <td>Tekno</td>
+                                            <td>60</td>
+                                            <td>Und.</td>
+                                            <td>S/ 600</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Costo de Herramientas</h4>
+                            <div class="d-flex">
+                              <div class="mr-auto">
+                                  <div class="form-group">
+                                      <button id="demo-btn-addrow" class="btn btn-success btn-sm"><i class="icon wb-plus" aria-hidden="true"></i>Agregar Gasto
+                                      </button>
+                                   </div>
+                              </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table color-table success-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Description</th>
+                                            <th>Marca</th>
+                                            <th>Cantidad</th>
+                                            <th>Und. Medida</th>
+                                            <th>Costo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Cerrojo</td>
+                                            <td>Tramontina</td>
+                                            <td>1</td>
+                                            <td>Und</td>
+                                            <td>S/ 600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Lanpa</td>
+                                            <td>Tramontina</td>
+                                            <td>10</td>
+                                            <td>Und</td>
+                                            <td>S/ 200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Taladro</td>
+                                            <td>Tramontina</td>
+                                            <td>2</td>
+                                            <td>Und</td>
+                                            <td>S/ 500</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6">
+                  <div class="card">
+                      <div class="card-body">
+                          <h4 class="card-title">Costo de Insumos</h4>
+                          <div class="d-flex">
+                            <div class="mr-auto">
+                                <div class="form-group">
+                                    <button id="demo-btn-addrow" class="btn btn-info btn-sm"><i class="icon wb-plus" aria-hidden="true"></i>Agregar Gasto
+                                    </button>
+                                 </div>
+                            </div>
+                          </div>
+                          <div class="table-responsive">
+                              <table class="table color-table info-table">
+                                  <thead>
+                                      <tr>
+                                          <th>#</th>
+                                          <th>Descripción</th>
+                                          <th>Marca</th>
+                                          <th>Cantidad</th>
+                                          <th>Und. Medida</th>
+                                          <th>Costo</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>1</td>
+                                          <td>Nigam</td>
+                                          <td>Eichmann</td>
+                                          <td>@Sonu</td>
+                                          <td>Nigam</td>
+                                          <td>Nigam</td>
+                                      </tr>
+                                      <tr>
+                                          <td>2</td>
+                                          <td>Deshmukh</td>
+                                          <td>Prohaska</td>
+                                          <td>@Genelia</td>
+                                          <td>Prohaska</td>
+                                          <td>@Genelia</td>
+                                      </tr>
+                                      <tr>
+                                          <td>3</td>
+                                          <td>Roshan</td>
+                                          <td>Rogahn</td>
+                                          <td>@Hritik</td>
+                                          <td>Prohaska</td>
+                                          <td>@Genelia</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="card">
+                      <div class="card-body">
+                          <h4 class="card-title">Costo de Mano de Obra</h4>
+                          <div class="d-flex">
+                            <div class="mr-auto">
+                                <div class="form-group">
+                                    <button id="demo-btn-addrow" (click)="mostrarCrearSemanaPersonal()" class="btn btn-warning btn-sm"><i class="icon wb-plus" aria-hidden="true"></i>Agregar Semana
+                                    </button>
+                                 </div>
+                            </div>
+                          </div>
+                          <div class="table-responsive">
+                              <table class="table color-table warning-table">
+                                  <thead>
+                                      <tr>
+                                          <th>#</th>
+                                          <th>Periodo</th>
+                                          <th>Costo Totalcv</th>
+                                          <th>Acción</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>1</td>
+                                          <td>Semana 1</td>
+                                          <td>S/ 2250</td>
+                                          <a (click)="actualizarSemana()"
+                                            data-toggle="tooltip"
+                                            class="cursor"
+                                            data-original-title="Actualizar Planilla">
+                                            <i class="fa fa-pencil text-inverse m-r-10"></i>
+                                          </a>
+                                          <a (click)="eliminarSemana()"
+                                            data-toggle="tooltip"
+                                            class="cursor"
+                                            data-original-title="Eliminar Planilla">
+                                            <i class="fa fa-trash text-danger"></i>
+                                          </a>
+                                      </tr>
+                                      <tr>
+                                          <td>2</td>
+                                          <td>Semana 2</td>
+                                          <td>S/ 2000</td>
+                                          <a (click)="actualizarSemana()"
+                                            data-toggle="tooltip"
+                                            class="cursor"
+                                            data-original-title="Actualizar Planilla">
+                                            <i class="fa fa-pencil text-inverse m-r-10"></i>
+                                          </a>
+                                          <a (click)="eliminarSemana()"
+                                            data-toggle="tooltip"
+                                            class="cursor"
+                                            data-original-title="Eliminar Planilla">
+                                            <i class="fa fa-trash text-danger"></i>
+                                          </a>
+                                      </tr>
+                                      <tr>
+                                          <td>3</td>
+                                          <td>Semana 3</td>
+                                          <td>S/ 2560</td>
+                                          <a (click)="actualizarSemana()"
+                                            data-toggle="tooltip"
+                                            class="cursor"
+                                            data-original-title="Actualizar Planilla">
+                                            <i class="fa fa-pencil text-inverse m-r-10"></i>
+                                          </a>
+                                          <a (click)="eliminarSemana()"
+                                            data-toggle="tooltip"
+                                            class="cursor"
+                                            data-original-title="Eliminar Planilla">
+                                            <i class="fa fa-trash text-danger"></i>
+                                          </a>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Costos Indirectos</h4>
+                        <div class="d-flex">
+                          <div class="mr-auto">
+                              <div class="form-group">
+                                  <button id="demo-btn-addrow" class="btn btn-danger btn-sm"><i class="icon wb-plus" aria-hidden="true"></i>Agregar Gasto
+                                  </button>
+                               </div>
+                          </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table color-table danger-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Descripción</th>
+                                        <th>Marca</th>
+                                        <th>Cantidad</th>
+                                        <th>Und. Medida</th>
+                                        <th>Costo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>gasolina</td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>S/ 100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Menú</td>
+                                        <td></td>
+                                        <td>10</td>
+                                        <td></td>
+                                        <td>S/ 100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Roshan</td>
+                                        <td></td>
+                                        <td>Rogahn</td>
+                                        <td></td>
+                                        <td>@Hritik</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+
+          <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Grabar</button>
+          <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+        </div>
+
+        </div>
+
+
+      </div>
+  </div>
+
+</div>
+

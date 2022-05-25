@@ -1,0 +1,52 @@
+<div class="fondo-modal-imagen fadeIn fast"
+    [class.oculto]="modalCrearSemanaPersonalService.ocultarModal">
+
+    <div class="modal fade show"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modalSemanaPersonal"
+    style="display: block;">
+
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalMarca">Crear Semana Planilla</h4>
+
+                </div>
+                <div class="modal-body">
+
+                  <div class="form-body">
+
+                    <!--/row-->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Descripción Semana</label>
+                            <input type="text" id="firstName" class="form-control" placeholder="">
+                        </div>
+                      </div>
+                      <!--/span-->
+                      <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Inicio Semana</label>
+                                <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                            </div>
+                      </div>
+                      <!--/span-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                      type="button"
+                      class="btn btn-default"
+                      data-dismiss="modal"
+                      (click)="cerrarModal()">Cancelar
+                  </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

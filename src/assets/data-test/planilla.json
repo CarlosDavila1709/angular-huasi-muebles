@@ -1,0 +1,93 @@
+{
+  "total": 1,
+  "planillas": [{
+      "uid": "1342423424234",
+      "personal": {
+          "uid": "1342423424234",
+          "nombres": "Pepe",
+          "apellidos": "100000232444",
+          "documento": "Pepe lucho",
+          "numeroDocumento": "Pepe lucho"
+        },
+      "lunes": "2",
+      "martes": "2",
+      "miercoles": "1.5",
+      "jueves": "1",
+      "viernes": "1",
+      "sabado": "2",
+      "domingo": "1",
+      "totalTurnos":"7",
+      "sueldo":"100",
+      "adelanto":"200",
+      "totalSueldo":"700",
+      "totalApagar":"500"
+  },
+  {
+    "uid": "1342423424234",
+    "personal": {
+        "uid": "1342423424234",
+        "nombres": "Juancito",
+        "apellidos": "100000232444",
+        "documento": "Pasaporte",
+        "numeroDocumento": "Pepe lucho"
+      },
+    "lunes": "1",
+    "martes": "2",
+    "miercoles": "1.5",
+    "jueves": "1",
+    "viernes": "1",
+    "sabado": "2",
+    "domingo": "1",
+    "totalTurnos":"7",
+    "sueldo":"100",
+    "adelanto":"300",
+    "totalSueldo":"700",
+    "totalApagar":"500"
+  },
+  {
+    "uid": "1342423424234",
+    "personal": {
+        "uid": "1342423424234",
+        "nombres": "Chicho",
+        "apellidos": "100000232444",
+        "documento": "DNI",
+        "numeroDocumento": "Pepe lucho"
+      },
+    "lunes": "1",
+    "martes": "2",
+    "miercoles": "1.5",
+    "jueves": "1",
+    "viernes": "1",
+    "sabado": "2",
+    "domingo": "1",
+    "totalTurnos":"7",
+    "sueldo":"100",
+    "adelanto":"300",
+    "totalSueldo":"700",
+    "totalApagar":"500"
+  },
+  {
+    "uid": "1342423424234",
+    "personal": {
+        "uid": "1342423424234",
+        "nombres": "Roger",
+        "apellidos": "100000232444",
+        "documento": "DNI",
+        "numeroDocumento": "41985266"
+      },
+    "lunes": "2",
+    "martes": "2",
+    "miercoles": "1.5",
+    "jueves": "1",
+    "viernes": "1",
+    "sabado": "2",
+    "domingo": "1",
+    "totalTurnos":"9",
+    "sueldo":"150",
+    "adelanto":"100",
+    "totalSueldo":"1200",
+    "totalApagar":"1000"
+  }
+]
+
+}

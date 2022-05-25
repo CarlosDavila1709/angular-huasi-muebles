@@ -25,6 +25,14 @@ export class SidebarService {
           ]
         },
         {
+          titulo: 'Proyectos',
+          icono:  'mdi mdi-folder-lock-open',
+          submenu: [
+            { titulo: 'Proyectos', url: 'proyectos'},
+            { titulo: 'Documentos', url: 'proyectos/documentos'},
+          ]
+        },
+        {
           titulo: 'Compras',
           icono:  'mdi mdi-folder-lock-open',
           submenu: [

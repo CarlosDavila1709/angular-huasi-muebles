@@ -24,7 +24,13 @@ import { AlmacenesComponent } from './inventario/almacenes/almacenes.component';
 import { TrasladoCentralComponent } from './compras/ordenes/traslado/trasladocentral.component';
 import { AlmacendetalleComponent } from './inventario/almacen-detalle/almacen-detalle.component';
 import { TrasladosComponent } from './inventario/traslados/traslados.component';
-
+import { ListaproyectosComponent } from './proyectos/lista-proyectos/listaproyectos.component';
+import { CrearproyectoComponent } from './proyectos/crear-proyectos/crearproyecto.component';
+import { ActualizarproyectoComponent } from './proyectos/actualizar-proyecto/actualizarproyecto.component';
+import { ModalMaterialComponent } from './proyectos/actualizar-proyecto/modal-agregar-material/modal-material.component';
+import { ModalSemanaPersonalComponent } from './proyectos/actualizar-proyecto/modal-semana-personal/modal-semana-personal.component';
+import { ModalAgregarSemanaComponent } from './proyectos/actualizar-proyecto/modal-agregar-semana/modal-agregar-semana.component';
+import { ListaproyectosdocumentosComponent } from './proyectos/lista-proyectos-documentacion/listaproyectosdocumentos.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +50,14 @@ import { TrasladosComponent } from './inventario/traslados/traslados.component';
     AlmacenesComponent,
     TrasladoCentralComponent,
     AlmacendetalleComponent,
-    TrasladosComponent
+    TrasladosComponent,
+    ListaproyectosComponent,
+    CrearproyectoComponent,
+    ActualizarproyectoComponent,
+    ModalMaterialComponent,
+    ModalSemanaPersonalComponent,
+    ModalAgregarSemanaComponent,
+    ListaproyectosdocumentosComponent
   ],
   exports: [
     DashboardComponent,

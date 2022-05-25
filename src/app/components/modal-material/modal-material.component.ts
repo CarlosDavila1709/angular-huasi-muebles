@@ -37,6 +37,10 @@ export class ModalMaterialComponent implements OnInit {
     this.materialForm = this.fb.group({
       nombre: ['', Validators.required],
       descripcion: ['', Validators.required],
+      categoria: ['', Validators.required],
+      modelo: ['', Validators.required],
+      marca: ['', Validators.required],
+      color: ['', Validators.required],
     });
 
 
