@@ -43,4 +43,13 @@ export class ActualizarproyectoComponent implements OnInit {
   eliminarSemana(){
 
   }
+
+  actualizarHerramienta(){
+
+  }
+
+  eliminarHerramienta(){
+
+  }
+
 }

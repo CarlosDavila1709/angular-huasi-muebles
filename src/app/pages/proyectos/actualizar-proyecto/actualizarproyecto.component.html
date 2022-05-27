@@ -2,7 +2,7 @@
   <div class="col-md-12">
       <div class="card">
           <div class="card-header bg-info">
-              <h4 class="m-b-0 text-white">Actualizar Proyecto</h4>
+              <h4 class="m-b-0 text-white">Actualizar Proyecto - INDEPENDENCIA BAÑOS</h4>
           </div>
           <div class="card-body">
 
@@ -13,14 +13,14 @@
                   <div class="col-md-6">
                       <div class="form-group">
                           <label class="control-label">Razon social</label>
-                          <input type="text" id="firstName" class="form-control" placeholder="">
+                          <input type="text" id="lastName" class="form-control" placeholder="SENATI" readonly>
                       </div>
                   </div>
                   <!--/span-->
                   <div class="col-md-6">
                       <div class="form-group">
                           <label class="control-label">Ruc</label>
-                          <input type="text" id="lastName" class="form-control" placeholder="">
+                          <input type="text" id="lastName" class="form-control"  placeholder="21045454545"  readonly>
                       </div>
                   </div>
                   <!--/span-->
@@ -30,7 +30,7 @@
                   <div class="col-md-6">
                       <div class="form-group">
                           <label class="control-label">Dirección</label>
-                          <input type="text" id="firstName" class="form-control" placeholder="">
+                          <input type="text" id="firstName" class="form-control" placeholder="Independencia "  readonly>
                       </div>
                   </div>
                   <!--/span-->
@@ -54,7 +54,7 @@
                   <div class="col-md-6">
                       <div class="form-group">
                           <label>Nombre del proyecto</label>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" value="Baños">
                       </div>
                   </div>
               </div>
@@ -62,15 +62,15 @@
                 <div class="col-md-12 ">
                     <div class="form-group">
                         <label>Descripción del proyecto</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value ="Reparacion de baños">
                     </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12 ">
                   <div class="form-group">
-                    <label>Dirección del proyecto</label>
-                    <input type="text" class="form-control">
+                    <label>SEDE</label>
+                    <input type="text" class="form-control" value="Independecnia">
                   </div>
                 </div>
               </div>
@@ -81,8 +81,8 @@
                     <div class="form-group">
                       <label>Monto total del proyecto</label>
                       <div class="input-group">
-                        <span class="input-group-addon">$</span>
-                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-addon">S/.</span>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" value="10500">
                         <span class="input-group-addon">.00</span>
                       </div>
                     </div>
@@ -185,7 +185,10 @@
                                             <th>Marca</th>
                                             <th>Cantidad</th>
                                             <th>Und. Medida</th>
-                                            <th>Costo</th>
+                                            <th>Precio Uni.</th>
+                                            <th>Gasto Uso %</th>
+                                            <th>Gasto Total</th>
+                                            <th>Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -196,6 +199,22 @@
                                             <td>1</td>
                                             <td>Und</td>
                                             <td>S/ 600</td>
+                                            <td>5%</td>
+                                            <td>S/ 600</td>
+                                            <td>
+                                              <a (click)="actualizarHerramienta()"
+                                                data-toggle="tooltip"
+                                                class="cursor"
+                                                data-original-title="Actualizar Herramienta">
+                                                <i class="fa fa-pencil text-inverse m-r-10"></i>
+                                              </a>
+                                              <a (click)="eliminarHerramienta()"
+                                                data-toggle="tooltip"
+                                                class="cursor"
+                                                data-original-title="Eliminar Herramienta">
+                                                <i class="fa fa-trash text-danger"></i>
+                                              </a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -204,6 +223,22 @@
                                             <td>10</td>
                                             <td>Und</td>
                                             <td>S/ 200</td>
+                                            <td>3%</td>
+                                            <td>S/ 600</td>
+                                            <td>
+                                              <a (click)="actualizarHerramienta()"
+                                                data-toggle="tooltip"
+                                                class="cursor"
+                                                data-original-title="Actualizar Herramienta">
+                                                <i class="fa fa-pencil text-inverse m-r-10"></i>
+                                              </a>
+                                              <a (click)="eliminarHerramienta()"
+                                                data-toggle="tooltip"
+                                                class="cursor"
+                                                data-original-title="Eliminar Herramienta">
+                                                <i class="fa fa-trash text-danger"></i>
+                                              </a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
@@ -212,6 +247,22 @@
                                             <td>2</td>
                                             <td>Und</td>
                                             <td>S/ 500</td>
+                                            <td>6%</td>
+                                            <td>S/ 600</td>
+                                            <td>
+                                              <a (click)="actualizarHerramienta()"
+                                                data-toggle="tooltip"
+                                                class="cursor"
+                                                data-original-title="Actualizar Herramienta">
+                                                <i class="fa fa-pencil text-inverse m-r-10"></i>
+                                              </a>
+                                              <a (click)="eliminarHerramienta()"
+                                                data-toggle="tooltip"
+                                                class="cursor"
+                                                data-original-title="Eliminar Herramienta">
+                                                <i class="fa fa-trash text-danger"></i>
+                                              </a>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -415,12 +466,135 @@
                 </div>
             </div>
         </div>
+        <h3 class="box-title m-t-40">Resumen</h3>
+        <hr>
         <div class="row">
 
+            <div class="col-lg-3">
+                <div class="card bg-info">
+                    <div class="card-body">
+                        <div class="d-flex no-block">
+                            <div class="m-r-20 align-self-center"><img src="../assets/images/icon/income-w.png" alt="Income"></div>
+                            <div class="align-self-center">
+                                <h6 class="text-white m-t-10 m-b-0">Gasto  Insumos</h6>
+                                <h2 class="m-t-0 text-white">953,000</h2></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card bg-success">
+                    <div class="card-body">
+                        <div class="d-flex no-block">
+                            <div class="m-r-20 align-self-center"><img src="../assets/images/icon/expense-w.png" alt="Income"></div>
+                            <div class="align-self-center">
+                                <h6 class="text-white m-t-10 m-b-0">Gasto Herramientas</h6>
+                                <h2 class="m-t-0 text-white">236,000</h2></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card bg-primary">
+                    <div class="card-body">
+                        <div class="d-flex no-block">
+                            <div class="m-r-20 align-self-center"><img src="../assets/images/icon/assets-w.png" alt="Income"></div>
+                            <div class="align-self-center">
+                                <h6 class="text-white m-t-10 m-b-0">Gasto Materiales</h6>
+                                <h2 class="m-t-0 text-white">987,563</h2></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card bg-danger">
+                    <div class="card-body">
+                        <div class="d-flex no-block">
+                            <div class="m-r-20 align-self-center"><img src="../assets/images/icon/staff-w.png" alt="Income"></div>
+                            <div class="align-self-center">
+                                <h6 class="text-white m-t-10 m-b-0">Gasto Indirectos</h6>
+                                <h2 class="m-t-0 text-white">987,563</h2></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-          <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Grabar</button>
-          <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
+
+
+
+        <div class="row">
+          <div class="col-lg-4">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="card bg-success text-white">
+                          <div class="card-body">
+                              <div class="d-flex">
+                                  <div class="stats">
+                                      <h1 class="text-white">9062</h1>
+                                      <h6 class="text-white">Total de Gastos</h6>
+
+                                  </div>
+                                  <div class="stats-icon text-right ml-auto"><i class="display-5 op-3 text-dark"></i></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-12">
+                      <div class="card bg-primary text-white">
+                          <div class="card-body">
+                              <div class="d-flex">
+                                  <div class="stats">
+                                      <h1 class="text-white">6509</h1>
+                                      <h6 class="text-white">Monto del Proyecto</h6>
+
+                                  </div>
+                                  <div class="stats-icon text-right ml-auto"><i class="display-5 op-3 text-dark"></i></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-12">
+                      <div class="card bg-info text-white">
+                          <div class="card-body">
+                              <div class="d-flex">
+                                  <div class="stats">
+                                      <h1 class="text-white">3655</h1>
+                                      <h6 class="text-white">Utilidad</h6>
+
+                                  </div>
+                                  <div class="stats-icon text-right ml-auto"><i class="display-5 op-3 text-dark"></i></div>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-8">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex">
+                          <h4 class="card-title"><span class="lstick"></span>Website Visit</h4>
+                          <ul class="list-inline m-b-0 ml-auto">
+                              <li>
+                                  <h6 class="text-muted text-success"><i class="fa fa-circle font-10 m-r-10 "></i>Site A view</h6> </li>
+                              <li>
+                                  <h6 class="text-muted text-info"><i class="fa fa-circle font-10 m-r-10"></i>Site B view</h6> </li>
+                          </ul>
+                      </div>
+                      <div class="text-center m-t-30">
+                          <div class="btn-group " role="group" aria-label="Basic example">
+                              <button type="button" class="btn btn-sm btn-secondary">PAGEVIEWS</button>
+                              <button type="button" class="btn btn-sm btn-secondary">REFERRALS</button>
+                          </div>
+                      </div>
+                      <div class="website-visitor p-relative m-t-30" style="height:355px; width:100%;"><div class="chartist-tooltip" style="top: 12.1562px; left: 443.016px;"><span class="chartist-tooltip-value">9</span></div><svg xmlns:ct="http://gionkunz.github.com/chartist-js/ct" width="100%" height="100%" class="ct-chart-line" style="width: 100%; height: 100%;"><g class="ct-grids"><line x1="30" x2="30" y1="15" y2="320" class="ct-grid ct-horizontal"></line><line x1="176.99776785714286" x2="176.99776785714286" y1="15" y2="320" class="ct-grid ct-horizontal"></line><line x1="323.9955357142857" x2="323.9955357142857" y1="15" y2="320" class="ct-grid ct-horizontal"></line><line x1="470.99330357142856" x2="470.99330357142856" y1="15" y2="320" class="ct-grid ct-horizontal"></line><line x1="617.9910714285714" x2="617.9910714285714" y1="15" y2="320" class="ct-grid ct-horizontal"></line><line x1="764.9888392857143" x2="764.9888392857143" y1="15" y2="320" class="ct-grid ct-horizontal"></line><line x1="911.9866071428571" x2="911.9866071428571" y1="15" y2="320" class="ct-grid ct-horizontal"></line><line x1="1058.984375" x2="1058.984375" y1="15" y2="320" class="ct-grid ct-horizontal"></line><line y1="320" y2="320" x1="30" x2="1058.984375" class="ct-grid ct-vertical"></line><line y1="269.1666666666667" y2="269.1666666666667" x1="30" x2="1058.984375" class="ct-grid ct-vertical"></line><line y1="218.33333333333331" y2="218.33333333333331" x1="30" x2="1058.984375" class="ct-grid ct-vertical"></line><line y1="167.5" y2="167.5" x1="30" x2="1058.984375" class="ct-grid ct-vertical"></line><line y1="116.66666666666666" y2="116.66666666666666" x1="30" x2="1058.984375" class="ct-grid ct-vertical"></line><line y1="65.83333333333334" y2="65.83333333333334" x1="30" x2="1058.984375" class="ct-grid ct-vertical"></line><line y1="15" y2="15" x1="30" x2="1058.984375" class="ct-grid ct-vertical"></line></g><g><g class="ct-series ct-series-a"><path d="M30,320L30,320C54.5,311.528,127.999,279.333,176.998,269.167C225.997,259,274.996,264.083,323.996,259C372.995,253.917,421.994,270.861,470.993,238.667C519.993,206.472,568.992,67.528,617.991,65.833C666.99,64.139,715.99,199.694,764.989,228.5C813.988,257.306,862.987,264.083,911.987,238.667C960.986,213.25,1034.485,103.111,1058.984,76L1058.984,320Z" class="ct-area" x1="NaN"></path><path d="M30,320C54.5,311.528,127.999,279.333,176.998,269.167C225.997,259,274.996,264.083,323.996,259C372.995,253.917,421.994,270.861,470.993,238.667C519.993,206.472,568.992,67.528,617.991,65.833C666.99,64.139,715.99,199.694,764.989,228.5C813.988,257.306,862.987,264.083,911.987,238.667C960.986,213.25,1034.485,103.111,1058.984,76" class="ct-line"></path><line x1="30" y1="320" x2="30.01" y2="320" class="ct-point" ct:value="0"></line><line x1="176.99776785714286" y1="269.1666666666667" x2="177.00776785714285" y2="269.1666666666667" class="ct-point" ct:value="5"></line><line x1="323.9955357142857" y1="259" x2="324.0055357142857" y2="259" class="ct-point" ct:value="6"></line><line x1="470.99330357142856" y1="238.66666666666669" x2="471.00330357142855" y2="238.66666666666669" class="ct-point" ct:value="8"></line><line x1="617.9910714285714" y1="65.83333333333334" x2="618.0010714285714" y2="65.83333333333334" class="ct-point" ct:value="25"></line><line x1="764.9888392857143" y1="228.5" x2="764.9988392857143" y2="228.5" class="ct-point" ct:value="9"></line><line x1="911.9866071428571" y1="238.66666666666669" x2="911.9966071428571" y2="238.66666666666669" class="ct-point" ct:value="8"></line><line x1="1058.984375" y1="76" x2="1058.994375" y2="76" class="ct-point" ct:value="24"></line></g><g class="ct-series ct-series-b"><path d="M30,320L30,320C54.5,314.917,127.999,291.194,176.998,289.5C225.997,287.806,274.996,308.139,323.996,309.833C372.995,311.528,421.994,311.528,470.993,299.667C519.993,287.806,568.992,236.972,617.991,238.667C666.99,240.361,715.99,304.75,764.989,309.833C813.988,314.917,862.987,269.167,911.987,269.167C960.986,269.167,1034.485,303.056,1058.984,309.833L1058.984,320Z" class="ct-area" x1="NaN"></path><path d="M30,320C54.5,314.917,127.999,291.194,176.998,289.5C225.997,287.806,274.996,308.139,323.996,309.833C372.995,311.528,421.994,311.528,470.993,299.667C519.993,287.806,568.992,236.972,617.991,238.667C666.99,240.361,715.99,304.75,764.989,309.833C813.988,314.917,862.987,269.167,911.987,269.167C960.986,269.167,1034.485,303.056,1058.984,309.833" class="ct-line"></path><line x1="30" y1="320" x2="30.01" y2="320" class="ct-point" ct:value="0"></line><line x1="176.99776785714286" y1="289.5" x2="177.00776785714285" y2="289.5" class="ct-point" ct:value="3"></line><line x1="323.9955357142857" y1="309.8333333333333" x2="324.0055357142857" y2="309.8333333333333" class="ct-point" ct:value="1"></line><line x1="470.99330357142856" y1="299.6666666666667" x2="471.00330357142855" y2="299.6666666666667" class="ct-point" ct:value="2"></line><line x1="617.9910714285714" y1="238.66666666666669" x2="618.0010714285714" y2="238.66666666666669" class="ct-point" ct:value="8"></line><line x1="764.9888392857143" y1="309.8333333333333" x2="764.9988392857143" y2="309.8333333333333" class="ct-point" ct:value="1"></line><line x1="911.9866071428571" y1="269.1666666666667" x2="911.9966071428571" y2="269.1666666666667" class="ct-point" ct:value="5"></line><line x1="1058.984375" y1="309.8333333333333" x2="1058.994375" y2="309.8333333333333" class="ct-point" ct:value="1"></line></g></g><g class="ct-labels"><foreignObject style="overflow: visible;" x="30" y="325" width="146.99776785714286" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 147px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">1</span></foreignObject><foreignObject style="overflow: visible;" x="176.99776785714286" y="325" width="146.99776785714286" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 147px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">2</span></foreignObject><foreignObject style="overflow: visible;" x="323.9955357142857" y="325" width="146.99776785714283" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 147px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">3</span></foreignObject><foreignObject style="overflow: visible;" x="470.99330357142856" y="325" width="146.9977678571429" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 147px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">4</span></foreignObject><foreignObject style="overflow: visible;" x="617.9910714285714" y="325" width="146.9977678571429" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 147px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">5</span></foreignObject><foreignObject style="overflow: visible;" x="764.9888392857143" y="325" width="146.99776785714278" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 147px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">6</span></foreignObject><foreignObject style="overflow: visible;" x="911.9866071428571" y="325" width="146.9977678571429" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 147px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">7</span></foreignObject><foreignObject style="overflow: visible;" x="1058.984375" y="325" width="30" height="20"><span class="ct-label ct-horizontal ct-end" style="width: 30px; height: 20px" xmlns="http://www.w3.org/2000/xmlns/">8</span></foreignObject><foreignObject style="overflow: visible;" y="269.1666666666667" x="10" height="50.833333333333336" width="10"><span class="ct-label ct-vertical ct-start" style="height: 51px; width: 10px" xmlns="http://www.w3.org/2000/xmlns/">0k</span></foreignObject><foreignObject style="overflow: visible;" y="218.33333333333334" x="10" height="50.833333333333336" width="10"><span class="ct-label ct-vertical ct-start" style="height: 51px; width: 10px" xmlns="http://www.w3.org/2000/xmlns/">5k</span></foreignObject><foreignObject style="overflow: visible;" y="167.5" x="10" height="50.83333333333333" width="10"><span class="ct-label ct-vertical ct-start" style="height: 51px; width: 10px" xmlns="http://www.w3.org/2000/xmlns/">10k</span></foreignObject><foreignObject style="overflow: visible;" y="116.66666666666666" x="10" height="50.83333333333334" width="10"><span class="ct-label ct-vertical ct-start" style="height: 51px; width: 10px" xmlns="http://www.w3.org/2000/xmlns/">15k</span></foreignObject><foreignObject style="overflow: visible;" y="65.83333333333334" x="10" height="50.833333333333314" width="10"><span class="ct-label ct-vertical ct-start" style="height: 51px; width: 10px" xmlns="http://www.w3.org/2000/xmlns/">20k</span></foreignObject><foreignObject style="overflow: visible;" y="15" x="10" height="50.83333333333334" width="10"><span class="ct-label ct-vertical ct-start" style="height: 51px; width: 10px" xmlns="http://www.w3.org/2000/xmlns/">25k</span></foreignObject><foreignObject style="overflow: visible;" y="-15" x="10" height="30" width="10"><span class="ct-label ct-vertical ct-start" style="height: 30px; width: 10px" xmlns="http://www.w3.org/2000/xmlns/">30k</span></foreignObject></g><defs><linearGradient id="gradient" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="rgba(255, 255, 255, 1)"></stop><stop offset="1" stop-color="rgba(38, 198, 218, 1)"></stop></linearGradient></defs></svg></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
         </div>
 
         </div>
