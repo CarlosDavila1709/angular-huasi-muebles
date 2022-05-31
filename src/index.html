@@ -21,9 +21,14 @@
 
   <link href="./assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
   <link href="./assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+  <link href="./assets/plugins/calendar/dist/fullcalendar.css" rel="stylesheet">
+  <link href="./assets/css/pages/chat-app-page.css" rel="stylesheet">
+  <link href="./assets/css/pages/contact-app-page.css" rel="stylesheet">
   <!-- You can change the theme colors from here -->
   <!--<link href="./assets/css/colors/default-dark.css" id="theme" rel="stylesheet">-->
   <link id="theme" rel="stylesheet">
+
+  <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
 </head>
 <body>
 
@@ -60,6 +65,10 @@
   <script src="./assets/js/custom.js"></script>
   <!-- ============================================================== -->
 
+  <script src="./assets/plugins/calendar/jquery-ui.min.js"></script>
+  <script src="./assets/plugins/moment/moment.js"></script>
+  <script src="./assets/plugins/calendar/dist/fullcalendar.min.js"></script>
+
   <script src="./assets/plugins/jquery-datatables-editable/jquery.dataTables.js"></script>
   <script src="./assets/plugins/datatables/dataTables.bootstrap.js"></script>
   <script src="./assets/plugins/tiny-editable/mindmup-editabletable.js"></script>
@@ -67,6 +76,7 @@
   <script src="./assets/plugins/chartist-js/dist/chartist.min.js"></script>
   <script src="./assets/plugins/d3/d3.min.js"></script>
   <script src="./assets/plugins/c3-master/c3.min.js"></script>
+
 
   <script>
     $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();

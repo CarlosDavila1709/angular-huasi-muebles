@@ -23,6 +23,7 @@ import { ListaproyectosComponent } from './proyectos/lista-proyectos/listaproyec
 import { CrearproyectoComponent } from './proyectos/crear-proyectos/crearproyecto.component';
 import { ActualizarproyectoComponent } from './proyectos/actualizar-proyecto/actualizarproyecto.component';
 import { ListaproyectosdocumentosComponent } from './proyectos/lista-proyectos-documentacion/listaproyectosdocumentos.component';
+import { PlanillaempleadoComponent } from './planilla/planilla-empleado/planillaempleado.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
             { path: 'proyectos/documentos', component: ListaproyectosdocumentosComponent, data:{ titulo:"" } },
             { path: 'newproyecto', component: CrearproyectoComponent, data:{ titulo:"" } },
             { path: 'actualizarproyecto', component: ActualizarproyectoComponent, data:{ titulo:"" } },
+            { path: 'planilla/empleados', component: PlanillaempleadoComponent, data:{ titulo:"" } },
         ]
     },
 

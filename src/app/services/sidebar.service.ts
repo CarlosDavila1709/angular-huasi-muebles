@@ -30,6 +30,7 @@ export class SidebarService {
           submenu: [
             { titulo: 'Proyectos', url: 'proyectos'},
             { titulo: 'Documentos', url: 'proyectos/documentos'},
+            { titulo: 'Planilla', url: 'planilla/empleados'},
           ]
         },
         {
