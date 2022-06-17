@@ -13,6 +13,7 @@ export class PlanillaEmpleado{
     public totalTurnos?: string,
     public sueldo?: string,
     public adelanto?: string,
+    public bono?: string,
     public totalSueldo?: string,
     public totalApagar?: string,
     public isActualizar: boolean = false){}
@@ -24,5 +25,6 @@ interface PlanillaPersonal{
   nombres: string,
   apellidos: string,
   documento: string,
-  numeroDocumento: string
+  numeroDocumento: string,
+  cargo: string
 }

@@ -24,6 +24,9 @@ import { CrearproyectoComponent } from './proyectos/crear-proyectos/crearproyect
 import { ActualizarproyectoComponent } from './proyectos/actualizar-proyecto/actualizarproyecto.component';
 import { ListaproyectosdocumentosComponent } from './proyectos/lista-proyectos-documentacion/listaproyectosdocumentos.component';
 import { PlanillaempleadoComponent } from './planilla/planilla-empleado/planillaempleado.component';
+import { FichaplanillaComponent } from './rrhh/planilla/fichaplanilla.component';
+import { PlanillaComponent } from './rrhh/planilla/tareo/planilla.component';
+import { CargoComponent } from './tablas/cargo/cargo.component';
 
 
 const routes: Routes = [
@@ -52,6 +55,9 @@ const routes: Routes = [
             { path: 'newproyecto', component: CrearproyectoComponent, data:{ titulo:"" } },
             { path: 'actualizarproyecto', component: ActualizarproyectoComponent, data:{ titulo:"" } },
             { path: 'planilla/empleados', component: PlanillaempleadoComponent, data:{ titulo:"" } },
+            { path: 'rrhh/planilla', component: FichaplanillaComponent, data:{ titulo:"" } },
+            { path: 'rrhh/planilla/planilla', component: PlanillaComponent, data:{ titulo:"" } },
+            { path: 'tablas/cargo', component: CargoComponent, data:{ titulo:"" } },
         ]
     },
 

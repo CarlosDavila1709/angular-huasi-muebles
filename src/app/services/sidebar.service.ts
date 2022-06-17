@@ -25,6 +25,13 @@ export class SidebarService {
           ]
         },
         {
+          titulo: 'RRHH',
+          icono:  'mdi mdi-folder-lock-open',
+          submenu: [
+            { titulo: 'Planilla', url: 'rrhh/planilla'},
+          ]
+        },
+        {
           titulo: 'Proyectos',
           icono:  'mdi mdi-folder-lock-open',
           submenu: [
@@ -57,6 +64,7 @@ export class SidebarService {
             { titulo: 'Marca', url: 'marca'},
             { titulo: 'Color', url: 'color'},
             { titulo: 'Modelo', url: 'modelo'},
+            { titulo: 'Cargo', url: 'tablas/cargo'},
           ]
         }
       ];

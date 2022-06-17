@@ -33,6 +33,11 @@ import { ModalAgregarSemanaComponent } from './proyectos/actualizar-proyecto/mod
 import { ListaproyectosdocumentosComponent } from './proyectos/lista-proyectos-documentacion/listaproyectosdocumentos.component';
 import { PlanillaempleadoComponent } from './planilla/planilla-empleado/planillaempleado.component';
 import { ModalActualizarPlanillaComponent } from './planilla/planilla-empleado/modal-actualizar-planilla/modal-actualizar-planilla.component';
+import { FichaplanillaComponent } from './rrhh/planilla/fichaplanilla.component';
+import { PlanillaComponent } from './rrhh/planilla/tareo/planilla.component'
+import { PersonalComponent } from './rrhh/planilla/personal/personal.component'
+import { DocumentosComponent } from './rrhh/planilla/documentos/documentos.component'
+import { CargoComponent } from './tablas/cargo/cargo.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +66,12 @@ import { ModalActualizarPlanillaComponent } from './planilla/planilla-empleado/m
     ModalAgregarSemanaComponent,
     ListaproyectosdocumentosComponent,
     PlanillaempleadoComponent,
-    ModalActualizarPlanillaComponent
+    ModalActualizarPlanillaComponent,
+    FichaplanillaComponent,
+    PlanillaComponent,
+    PersonalComponent,
+    DocumentosComponent,
+    CargoComponent
   ],
   exports: [
     DashboardComponent,

@@ -16,7 +16,7 @@ const base_url = environment.base_url;
 export class PlanillaEmpleadoService {
 
   public _ocultarModal: boolean = true;
-
+  public mostrarPlanillaFlag: boolean = false;
 
   constructor(private http: HttpClient,private router: Router) { }
   get headers(){
@@ -59,6 +59,7 @@ export class PlanillaEmpleadoService {
                                                   planilla.totalTurnos,
                                                   planilla.sueldo,
                                                   planilla.adelanto,
+                                                  planilla.bono,
                                                   planilla.totalSueldo,
                                                   planilla.totalApagar)
                       );
@@ -68,5 +69,12 @@ export class PlanillaEmpleadoService {
                       };
                     })
                   );
+  }
+
+  mostrarFormularioPlanilla(){
+    this.mostrarPlanillaFlag = true;
+  }
+  regresarBuscarProyectosTareo(){
+    this.mostrarPlanillaFlag = false;
   }
 }

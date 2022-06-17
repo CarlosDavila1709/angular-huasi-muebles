@@ -1,0 +1,238 @@
+
+
+<div class="row">
+  <div class="col-12">
+
+          <div class="card-body">
+
+                  <div class="row animated fadeIn fast">
+                    <div class="col-6">
+                      <h3 class="box-title">Proyecto</h3>
+                    </div>
+                    <div class="col-6">
+                      <div style="float: right;"><button type="button" class="btn btn-success waves-effect waves-light" (click)="regresar()"> Regresar </button></div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group row">
+                              <label class="control-label text-right col-md-3">Proyecto:</label>
+                              <div class="col-md-9">
+                                  <p class="form-control-static"> SENATI BAÑOS </p>
+                              </div>
+                          </div>
+                      </div>
+                      <!--/span-->
+                      <div class="col-md-6">
+                          <div class="form-group row">
+                              <label class="control-label text-right col-md-3">Codigo:</label>
+                              <div class="col-md-9">
+                                  <p class="form-control-static"> 00027 </p>
+                              </div>
+                          </div>
+                      </div>
+                      <!--/span-->
+                  </div>
+                  <!--/row-->
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group row">
+                              <label class="control-label text-right col-md-3">SEMANA:</label>
+                              <div class="col-md-9">
+                                <input type="text" class="form-control" placeholder="">
+                              </div>
+                          </div>
+                      </div>
+                      <!--/span-->
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="control-label text-right col-md-3">SEMANA:</label>
+                            <div class="col-md-9">
+                              <div class="input-group">
+                                <div id="datepicker"></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!--/row-->
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group row">
+                              <label class="control-label text-right col-md-3">Desde:</label>
+                              <div class="col-md-9">
+                                  <p class="form-control-static"> 12/05/2022 </p>
+                              </div>
+                          </div>
+                      </div>
+                      <!--/span-->
+                      <div class="col-md-6">
+                          <div class="form-group row">
+                              <label class="control-label text-right col-md-3">Hasta:</label>
+                              <div class="col-md-9">
+                                  <p class="form-control-static"> 15/05/2022 </p>
+                              </div>
+                          </div>
+                      </div>
+                      <!--/span-->
+                  </div>
+                  <!--/row-->
+
+
+              <div class="text-right">
+                <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Agregar Personal</button>
+                <button type="submit" class="btn btn-inverse waves-effect waves-light">Importar Personal</button>
+              </div>
+
+
+              <div class="table-responsive">
+
+                  <table id="demo-foo-addrow" class="table m-t-30 table-hover no-wrap contact-list footable-loaded footable" data-page-size="10">
+                    <thead>
+                        <tr>
+                          <th>Personal</th>
+                          <th>Documento</th>
+                          <th>N° Documento</th>
+                          <th>Cargo</th>
+                          <th>LU</th>
+                          <th>MA</th>
+                          <th>MI</th>
+                          <th>JU</th>
+                          <th>VI</th>
+                          <th>SA</th>
+                          <th>DO</th>
+                          <th>total turnos</th>
+                          <th>Sueldo/turno</th>
+                          <th>Adelanto</th>
+                          <th>Plus Bono </th>
+                          <th>Total sueldo</th>
+                          <th>Total a Pagar</th>
+                          <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr *ngFor = "let planilla of planillas">
+                          <td>{{ planilla.personal.nombres }}</td>
+                          <td>{{ planilla.personal.documento }}</td>
+                          <td>{{ planilla.personal.numeroDocumento }}</td>
+                          <td>{{ planilla.personal.cargo }}</td>
+                          <td *ngIf="!planilla.isActualizar"> {{ planilla.lunes }}</td>
+                          <td *ngIf="planilla.isActualizar">
+                                <select class="form-control custom-select" style="width:auto;">
+                                  <option value="A">0.25</option>
+                                  <option value="A">0.5</option>
+                                  <option value="B">1</option>
+                                  <option value="C">1.5</option>
+                                  <option value="C">2</option>
+                                </select>
+                          </td>
+                          <td *ngIf="!planilla.isActualizar">{{ planilla.martes }}</td>
+                          <td *ngIf="planilla.isActualizar">
+                            <select class="form-control custom-select" style="width:auto;">
+                              <option value="A">0.25</option>
+                              <option value="A">0.5</option>
+                              <option value="B">1</option>
+                              <option value="C">1.5</option>
+                              <option value="C">2</option>
+                            </select>
+                          </td>
+                          <td *ngIf="!planilla.isActualizar">{{ planilla.miercoles }}</td>
+                          <td *ngIf="planilla.isActualizar">
+                            <select class="form-control custom-select" style="width:auto;">
+                              <option value="A">0.25</option>
+                              <option value="A">0.5</option>
+                              <option value="B">1</option>
+                              <option value="C">1.5</option>
+                              <option value="C">2</option>
+                            </select>
+                          </td>
+                          <td *ngIf="!planilla.isActualizar">{{ planilla.jueves }}</td>
+                          <td *ngIf="planilla.isActualizar">
+                            <select class="form-control custom-select" style="width:auto;">
+                              <option value="A">0.25</option>
+                              <option value="A">0.5</option>
+                              <option value="B">1</option>
+                              <option value="C">1.5</option>
+                              <option value="C">2</option>
+                            </select>
+                          </td>
+                          <td *ngIf="!planilla.isActualizar">{{ planilla.viernes }}</td>
+                          <td *ngIf="planilla.isActualizar">
+                            <select class="form-control custom-select" style="width:auto;">
+                              <option value="A">0.25</option>
+                              <option value="A">0.5</option>
+                              <option value="B">1</option>
+                              <option value="C">1.5</option>
+                              <option value="C">2</option>
+                            </select>
+                          </td>
+                          <td *ngIf="!planilla.isActualizar">{{ planilla.sabado }}</td>
+                          <td *ngIf="planilla.isActualizar">
+                            <select class="form-control custom-select" style="width:auto;">
+                              <option value="A">0.25</option>
+                              <option value="A">0.5</option>
+                              <option value="B">1</option>
+                              <option value="C">1.5</option>
+                              <option value="C">2</option>
+                            </select>
+                          </td>
+                          <td *ngIf="!planilla.isActualizar">{{ planilla.domingo }}</td>
+                          <td *ngIf="planilla.isActualizar">
+                            <select class="form-control custom-select" style="width:auto;">
+                              <option value="A">0.25</option>
+                              <option value="A">0.5</option>
+                              <option value="B">1</option>
+                              <option value="C">1.5</option>
+                              <option value="C">2</option>
+                            </select>
+                          </td>
+                          <td>{{ planilla.totalTurnos }}</td>
+                          <td>{{ planilla.sueldo }}</td>
+                          <td *ngIf="!planilla.isActualizar">{{ planilla.adelanto }}</td>
+                          <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.adelanto"></td>
+                          <td *ngIf="!planilla.isActualizar">{{ planilla.bono }}</td>
+                          <td *ngIf="planilla.isActualizar"><input type="text" class="form-control" #lunes="ngModel" required name="lunes" [(ngModel)]="planilla.bono"></td>
+                          <td>{{ planilla.totalSueldo }}</td>
+                          <td>{{ planilla.totalApagar }}</td>
+                          <td>
+                            <a *ngIf="!planilla.isActualizar" (click)="mostrarPlanilla(planilla)"
+                              data-toggle="tooltip"
+                              class="cursor"
+                              data-original-title="Actualizar Planilla">
+                              <i class="fa fa-pencil text-inverse m-r-10"></i>
+                            </a>
+                            <a *ngIf="planilla.isActualizar" (click)="actualizarPlanilla(planilla)"
+                              data-toggle="tooltip"
+                              class="cursor"
+                              data-original-title="Actualizar Planilla">
+                              <i class="fa fa-check text-inverse m-r-10"></i>
+                            </a>
+                            <a *ngIf="planilla.isActualizar" (click)="CancelarEliminacion(proyecto)"
+                              data-toggle="tooltip"
+                              class="cursor"
+                              data-original-title="Cancelar Planilla">
+                              <i class="fa fa-close text-inverse m-r-10"></i>
+                            </a>
+                            <a *ngIf="!planilla.isActualizar" (click)="eliminarPlanilla(proyecto)"
+                              data-toggle="tooltip"
+                              class="cursor"
+                              data-original-title="Eliminar Planilla">
+                              <i class="fa fa-trash text-danger"></i>
+                            </a>
+                          </td>
+                      </tr>
+                  </tbody>
+
+                </table>
+
+              </div>
+          </div>
+      </div>
+
+</div>
+
+
+
+
