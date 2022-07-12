@@ -65,6 +65,7 @@ export class SidebarService {
             { titulo: 'Color', url: 'color'},
             { titulo: 'Modelo', url: 'modelo'},
             { titulo: 'Cargo', url: 'tablas/cargo'},
+            { titulo: 'Documento', url: 'tablas/documento'},
           ]
         }
       ];

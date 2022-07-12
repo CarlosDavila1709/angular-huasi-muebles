@@ -1,0 +1,59 @@
+<div class="fondo-modal-imagen fadeIn fast"
+    [class.oculto]="modalMostrarProyectosService.ocultarModal">
+
+    <div class="modal fade show"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="modalColor"
+    style="display: block;">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalMarca">Proyectos</h4>
+
+                </div>
+                <div class="modal-body">
+
+                  <div class="table-responsive">
+
+                    <table id="demo-foo-addrow" class="table m-t-30 table-hover no-wrap contact-list footable-loaded footable" data-page-size="10">
+                      <thead>
+                          <tr>
+                            <th>CODIGO</th>
+                            <th>Nombre proyecto</th>
+                            <th>Sucursal</th>
+                            <th>Turnos</th>
+                          </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>1231</td>
+                          <td>Senati - baños</td>
+                          <td>Independencia</td>
+                          <td>1</td>
+                        </tr>
+                        <tr>
+                          <td>9895</td>
+                          <td>Senati - aire acondicionado</td>
+                          <td>San juan lurigancho</td>
+                          <td>1</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal"
+                        (click)="cerrarModal()">Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

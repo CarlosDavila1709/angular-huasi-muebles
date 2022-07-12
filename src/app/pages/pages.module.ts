@@ -38,6 +38,9 @@ import { PlanillaComponent } from './rrhh/planilla/tareo/planilla.component'
 import { PersonalComponent } from './rrhh/planilla/personal/personal.component'
 import { DocumentosComponent } from './rrhh/planilla/documentos/documentos.component'
 import { CargoComponent } from './tablas/cargo/cargo.component';
+import { DocumentoComponent } from './tablas/documentos/documento.component'
+import { ReporteplanillaComponent } from './rrhh/planilla/reportes/reporteplanilla.component'
+import { ModalMostrarProyectoComponent } from './rrhh/planilla/reportes/modal-mostrar-proyectos/modal-mostrar-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,10 @@ import { CargoComponent } from './tablas/cargo/cargo.component';
     PlanillaComponent,
     PersonalComponent,
     DocumentosComponent,
-    CargoComponent
+    CargoComponent,
+    DocumentoComponent,
+    ReporteplanillaComponent,
+    ModalMostrarProyectoComponent
   ],
   exports: [
     DashboardComponent,

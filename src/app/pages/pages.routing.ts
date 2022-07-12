@@ -27,6 +27,7 @@ import { PlanillaempleadoComponent } from './planilla/planilla-empleado/planilla
 import { FichaplanillaComponent } from './rrhh/planilla/fichaplanilla.component';
 import { PlanillaComponent } from './rrhh/planilla/tareo/planilla.component';
 import { CargoComponent } from './tablas/cargo/cargo.component';
+import { DocumentoComponent } from './tablas/documentos/documento.component';
 
 
 const routes: Routes = [
@@ -58,6 +59,7 @@ const routes: Routes = [
             { path: 'rrhh/planilla', component: FichaplanillaComponent, data:{ titulo:"" } },
             { path: 'rrhh/planilla/planilla', component: PlanillaComponent, data:{ titulo:"" } },
             { path: 'tablas/cargo', component: CargoComponent, data:{ titulo:"" } },
+            { path: 'tablas/documento', component: DocumentoComponent, data:{ titulo:"" } },
         ]
     },
 
